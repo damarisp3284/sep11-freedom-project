@@ -1,19 +1,21 @@
 # Tool Learning Log
 
-## Tool: **X**
+## Tool: **Phaser**
 
-## Project: **X**
+## Project: **Data Protection Game**
 
 ---
 
-### X/X/XX:
-* Text
+### 10/27/25:
+* Started to create my own mini-games as a way to test my knowledge with what I have learned
+* Used the properties of animation and actions to see what elements I would like to add into my game
+* 
 
 ### X/X/XX:
 * Text
 
 
-<!-- 
+<!--
 * Links you used today (websites, videos, etc)
 * Things you tried, progress you made, etc
 * Challenges, a-ha moments, etc
