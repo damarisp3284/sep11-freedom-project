@@ -1,5 +1,4 @@
-<script>
-    class Example extends Phaser.Scene
+class Example extends Phaser.Scene
     {
         preload ()
         {
@@ -44,5 +43,5 @@
     };
 
     const game = new Phaser.Game(config);
-   
+
 
