@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
 
-// Phaser configuration
 const config = {
     type: Phaser.AUTO,
     width: 800,
@@ -23,5 +22,5 @@ function create() {
 }
 
 function update() {
-    // Game loop logic
+
 }
