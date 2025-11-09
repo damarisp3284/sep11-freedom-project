@@ -1,9 +1,13 @@
 # Entry 1
 ##### 11/3/25
-### Context
+### Context + Plan
 
 
 ### EDP
+
+### 
+
+
 
 [Next](entry02.md)
 
