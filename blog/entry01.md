@@ -1,5 +1,5 @@
 # Entry 1
-##### X/X/XX
+##### /X/XX
 
 Text
 
