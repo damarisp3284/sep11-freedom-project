@@ -1,7 +1,9 @@
 # Entry 1
 ##### 11/3/25
+### Context
 
-Text
+
+### EDP
 
 [Next](entry02.md)
 
