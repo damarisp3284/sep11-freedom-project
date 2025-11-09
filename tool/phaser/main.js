@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const config = {
     type: Phaser.AUTO,
     width: 800,
@@ -17,3 +18,5 @@ function preload() {
 function create() {
     this.add.text(100, 100, 'Hello Phaser!', { font: '32px Arial', fill: '#ffffff' });
 }
+=======
+>>>>>>> parent of 84cf420 (Sat, Nov 8, 2025, 5:20 PM -05:00)
