@@ -1,20 +1,26 @@
-const config = {
+var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
     scene: {
         preload: preload,
-        create: create
+        create: create,
+        update: update
     }
 };
 
-const game = new Phaser.Game(config);
+var game = new Phaser.Game(config);
 
-function preload() {
-    // Load assets here
+function preload ()
+{
 }
 
-function create() {
-    this.add.text(100, 100, 'Hello Phaser!', { font: '32px Arial', fill: '#ffffff' });
+function create ()
+{
 }
+
+function update ()
+{
+}
+
 
