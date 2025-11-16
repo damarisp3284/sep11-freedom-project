@@ -95,32 +95,6 @@ function collectStar (player, star)
 {
     star.disableBody(true, true);
 
-    score += 10;
-    scoreText.setText('Score: ' + score);
-}
-
-var score = 0;
-var scoreText;
-
-scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
-
-bombs = this.physics.add.group();
-
-this.physics.add.collider(bombs, platforms);
-
-this.physics.add.collider(player, bombs, hitBomb, null, this);
-
-function hitBomb (player, bomb)
-{
-    this.physics.pause();
-
-    player.setTint(0xff0000);
-
-    player.anims.play('turn');
-
-    gameOver = true;
-}
-
 }
 
 function update ()
