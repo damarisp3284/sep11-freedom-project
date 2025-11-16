@@ -73,8 +73,15 @@ this.anims.create({
 
 this.physics.add.collider(player, platforms);
 
-cursors = this.input.keyboard.createCursorKeys();
-if (cursors.left.isDown)
+
+
+
+}
+
+
+function update ()
+{
+    if (cursors.left.isDown)
 {
     player.setVelocityX(-160);
 
@@ -97,13 +104,6 @@ if (cursors.up.isDown && player.body.touching.down)
 {
     player.setVelocityY(-330);
 }
-
-
-}
-
-
-function update ()
-{
 }
 
 
