@@ -5,8 +5,8 @@ var config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: {y: 300},
-            debug:false
+            gravity: { y: 300 },
+            debug: false
         }
     },
     scene: {
@@ -32,8 +32,10 @@ function preload ()
 
 function create ()
 {
-    player = this.physics.add.sprite(100, 450, 'dude');
     this.add.image(400, 300, 'sky');
+
+     player = this.physics.add.sprite(100, 450, 'dude');
+
     this.add.image(400, 300, 'star');
 }
 
