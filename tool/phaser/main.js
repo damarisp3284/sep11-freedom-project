@@ -45,6 +45,25 @@ function update ()
 {
     let players;
     let cursors;
+
+    if (cursors.left.isDown)
+{
+    player.setVelocityX(-160);
+
+    player.anims.play('left', true);
+}
+else if (cursors.right.isDown)
+{
+    player.setVelocityX(160);
+
+    player.anims.play('right', true);
+}
+else
+{
+    player.setVelocityX(0);
+
+    player.anims.play('turn');
+}
 }
 
 var platforms;
@@ -90,26 +109,8 @@ player.body.setGravityY(300);
 this.physics.add.collider(player, platforms);
 
 cursors = this.input.keyboard.createCursorKeys();
-if (cursors.left.isDown)
-{
-    player.setVelocityX(-160);
 
-    player.anims.play('left', true);
-}
-else if (cursors.right.isDown)
-{
-    player.setVelocityX(160);
-
-    player.anims.play('right', true);
-}
-else
-{
-    player.setVelocityX(0);
-
-    player.anims.play('turn');
-}
-
-this.anims.create({
+this.anims.create ({
     key: 'left',
     frames: this.anims.generateFrameNumbers('dude', { start: 0, end:
         frameRate: 10,
