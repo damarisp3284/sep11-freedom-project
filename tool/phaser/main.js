@@ -87,12 +87,16 @@ stars.children.iterate(function (child) {
 
 bombs = this.physics.add.group();
 
+scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
 
 this.physics.add.collider(player, platforms);
 this.physics.add.collider(stars, platforms);
+this.physics.add.collider(bombs, platforms);
 
 this.physics.add.overlap(player, stars, collectStar, null, this);
+
+this.physics.add.collider(player, bombs, hitBomb, null, this);
 
 }
 
