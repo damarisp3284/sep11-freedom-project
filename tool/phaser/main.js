@@ -38,33 +38,6 @@ function create ()
      platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 
     this.add.image(400, 300, 'star');
-
-}
-
-
-function update ()
-{
-    let players;
-    let cursors;
-
-    if (cursors.left.isDown)
-{
-    player.setVelocityX(-160);
-
-    player.anims.play('left', true);
-}
-else if (cursors.right.isDown)
-{
-    player.setVelocityX(160);
-
-    player.anims.play('right', true);
-}
-else
-{
-    player.setVelocityX(0);
-
-    player.anims.play('turn');
-}
 }
 
 // Platform creation
@@ -80,9 +53,8 @@ function create ()
     platforms.create(50, 250, 'ground');
     platforms.create(750, 220, 'ground');
 
-   
+
 }
 
-function update () {}
 
 
