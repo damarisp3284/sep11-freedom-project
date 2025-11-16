@@ -16,6 +16,8 @@ var config = {
     }
 };
 
+var platforms;
+
 var game = new Phaser.Game(config);
 
 function preload ()
@@ -38,7 +40,7 @@ function create ()
 
 }
 
-var platforms;
+
 
 function create ()
 {
