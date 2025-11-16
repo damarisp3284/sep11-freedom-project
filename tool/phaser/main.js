@@ -73,7 +73,7 @@ function preload ()
         cursors = this.input.keyboard.createCursorKeys();
 
         this.physics.add.collider(player, platforms);
-        
+
     player = this.physics.add.sprite(100, 450, 'dude');
 
     player.setBounce(0.2);
@@ -98,6 +98,38 @@ function preload ()
         frameRate: 10,
         repeat: -1
     });
+    cursors = this.input.keyboard.creatorCursorKeys();
+
+    this.physics.add.collider(player, platforms);
+    }
+    
+     function update ()
+    {
+        if (cursors.left.isDown)
+        {
+            player.setVelocityX(-160);
+
+            player.anims.play('left', true);
+        }
+        else if (cursors.right.isDown)
+        {
+            player.setVelocityX(160);
+
+            player.anims.play('right', true);
+        }
+        else
+        {
+            player.setVelocityX(0);
+
+            player.anims.play('turn');
+        }
+
+        if (cursors.up.isDown && player.body.touching.down)
+        {
+            player.setVelocityY(-330);
+        }
+
+
 
 
  }
