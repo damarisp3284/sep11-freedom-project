@@ -55,9 +55,6 @@ function create ()
 
 }
 
-
-
-
 player = this.physics.add.sprite(100, 450, 'dude');
 
 player.setBounce(0.2);
@@ -83,5 +80,6 @@ this.anims.create({
     repeat: -1
 });
 
+player.body.setGravityY(300);
 
 
