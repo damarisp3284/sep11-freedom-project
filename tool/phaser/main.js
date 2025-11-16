@@ -18,6 +18,12 @@ var config = {
 
 var player;
 var platforms;
+var stars;
+var bombs;
+var cursors;
+var score = 0;
+var gameOver = false;
+var scoreText;
 
 var game = new Phaser.Game(config);
 
