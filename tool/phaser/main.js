@@ -35,6 +35,7 @@ function create ()
     this.add.image(400, 300, 'sky');
 
      player = this.physics.add.sprite(100, 450, 'dude');
+     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
 
     this.add.image(400, 300, 'star');
 }
@@ -56,14 +57,14 @@ function create ()
     platforms.create(50, 250, 'ground');
     platforms.create(750, 220, 'ground');
 
-}
+    player = this.physics.add.sprite(100, 450, 'dude');
 
-player = this.physics.add.sprite(100, 450, 'dude');
+    player.setBounce(0.2);
+    player.setCollideWorldBounds(true);
 
-player.setBounce(0.2);
-player.setCollideWorldBounds(true);
+    this.physics.add.collider(player, platforms);
 
-this.anims.create({
+    this.anims.create({
     key: 'left',
     frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
     frameRate: 10,
@@ -184,3 +185,8 @@ function collectStar (player, star)
 
     }
 }
+}
+
+
+
+
