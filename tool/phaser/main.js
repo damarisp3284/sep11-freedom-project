@@ -16,7 +16,10 @@ var config = {
     }
 };
 
+var player;
+var stars;
 var platforms;
+var cursors;
 
 var game = new Phaser.Game(config);
 
@@ -31,16 +34,6 @@ function preload ()
         { frameWidth: 32, frameHeight: 48 }
     );
 }
-
-
-function create ()
-{
-    this.add.image(400, 300, 'sky');
-    this.add.image(400, 300, 'star');
-
-}
-
-
 
 function create ()
 {
