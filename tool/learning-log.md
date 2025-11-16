@@ -12,7 +12,9 @@
 *
 
 ### 11/15/25:
-* 
+* Watched videos on Youtube to create games
+    * Saw a few inspired as Pokemon or other acrade games
+* Modified the version of Phaser's create your own game to my version 
 
 
 <!--
