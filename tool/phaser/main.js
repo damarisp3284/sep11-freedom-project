@@ -110,7 +110,7 @@ this.physics.add.collider(player, platforms);
 
 cursors = this.input.keyboard.createCursorKeys();
 
-this.anims.create ({
+this.anims.create({
     key: 'left',
     frames: this.anims.generateFrameNumbers('dude', { start: 0, end:
         frameRate: 10,
