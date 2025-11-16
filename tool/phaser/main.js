@@ -43,6 +43,8 @@ function create ()
 
 function update ()
 {
+    let players;
+    let cursors;
 }
 
 var platforms;
@@ -106,6 +108,26 @@ else
 
     player.anims.play('turn');
 }
+
+this.anims.create({
+    key: 'left',
+    frames: this.anims.generateFrameNumbers('dude', { start: 0, end:
+        frameRate: 10,
+        repeat: -1
+});
+
+this.anims.create({
+    key: 'turn',
+    frame: [ { key: 'dude', frame: 4}],
+    frameRate: 20
+});
+
+this.anims.create({
+    key: 'right',
+    frames: this.anims.generateFrameNumbers('dude', { start: 5, end:
+     frameRate: 10,
+     repeat: -1
+});
 
 if (cursors.up.isDown && player.body.touching.down)
 {
