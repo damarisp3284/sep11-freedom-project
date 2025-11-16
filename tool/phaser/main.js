@@ -85,6 +85,9 @@ stars.children.iterate(function (child) {
 
 });
 
+bombs = this.physics.add.group();
+
+
 
 this.physics.add.collider(player, platforms);
 this.physics.add.collider(stars, platforms);
