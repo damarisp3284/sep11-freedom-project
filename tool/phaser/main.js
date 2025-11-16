@@ -89,6 +89,11 @@ function preload ()
             child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
         });
 
+        bombs = this.physics.add.group();
+
+        scoreText = this.add.text (16, 16, 'score: 0', {fontSize:'32px',
+         fill: '#000' });
+
         this.physics.add.collider(player, platforms);
         this physics.add.collider(stars, platform);
 
