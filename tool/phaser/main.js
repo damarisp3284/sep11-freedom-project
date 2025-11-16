@@ -39,7 +39,7 @@ function preload ()
 function create ()
 {
     this.add.image(400, 300, 'sky');
-    
+
     platforms = this.physics.add.staticGroup();
 
     platforms.create(400, 568, 'ground').setScale(2).refreshBody();
@@ -158,7 +158,7 @@ function collectStar (player, star)
         bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
         bomb.allowGravity = false;
     }
-
+}
     function hitBomb (player, bomb)
     {
         this.physics.pause();
@@ -169,7 +169,6 @@ function collectStar (player, star)
 
         gameOver = true;
     }
-}
 
 
 
