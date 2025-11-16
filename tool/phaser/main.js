@@ -32,6 +32,7 @@ function preload ()
 
 function create ()
 {
+    player = this.physics.add.sprite(100, 450, 'dude');
     this.add.image(400, 300, 'sky');
     this.add.image(400, 300, 'star');
 }
