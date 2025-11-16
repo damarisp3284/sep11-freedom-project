@@ -187,6 +187,6 @@ function collectStar (player, star)
 }
 }
 
-
+function update () {}
 
 
