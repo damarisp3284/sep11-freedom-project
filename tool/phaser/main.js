@@ -125,6 +125,11 @@ function hitBomb (player, bomb)
 
 function update ()
 {
+   if (gameOver)
+    {
+        return;
+    }
+
     if (cursors.left.isDown)
 {
     player.setVelocityX(-160);
@@ -147,6 +152,8 @@ else
 if (cursors.up.isDown && player.body.touching.down)
 {
     player.setVelocityY(-330);
+}
+}
 
 function collectStar (player, star)
 {
@@ -172,18 +179,17 @@ function collectStar (player, star)
         bomb.allowGravity = false;
     }
 
-function hitBomb (player, bomb)
-{
-    this.physics.pause();
+    function hitBomb (player, bomb)
+    {
+        this.physics.pause();
 
-    player.setTint(0xff0000);
+        player.setTint(0xff0000);
 
-    player.anims.play('turn');
+        player.anims.play('turn');
 
-    gameOver = true;
+        gameOver = true;
+    }
 }
 
-}
-}
 
 
