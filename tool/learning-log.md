@@ -16,7 +16,8 @@
     * Saw a few inspired as Pokemon or other acrade games
 * Modified the version of Phaser's create your own game to my version
 * Instead of collectiing coins I tried to make it collect stars
-* Some challenges I had was that the screen came out blank when I tried to test it 
+* Some challenges I had was that the screen came out blank when I tried to test it
+* I will try to use more physics features and animations 
 
  <img width="444" height="384" alt="{0E8AC5FA-5CE9-446F-9AC9-2C9B892A6368}" src="https://github.com/user-attachments/assets/7f42a4c5-2434-4622-afab-b02b3e61baac" />
 
