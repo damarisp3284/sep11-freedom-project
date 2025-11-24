@@ -25,6 +25,11 @@
 
 <img width="365" height="367" alt="{04C0BEC0-6625-4B09-B224-56CBF88D2A61}" src="https://github.com/user-attachments/assets/6e0c9a72-fe48-455a-a53e-08be23116e29" />
 
+11/23/25
+* Watched more vidoes before being confident in doing other phaser features
+  * Saw a into to refresh my mind: <a href = "https://youtu.be/X9DiAJuLJgk?si=wrgP6hqpr5__SdeX">Video</a> 
+* <a href = "https://youtu.be/ovMYA2_W6QE?si=q2_bXa9p9vzG3mfS"> Animations video</a>
+* <a href = "https://youtu.be/RpTCJcGoWJg?si=A3-m3w_OEtmZZ5e8"> Animations video 2</a>
 
 <!--
 * Links you used today (websites, videos, etc)
