@@ -15,7 +15,7 @@ Before the year ends, our teacher decided it's best that we continue building wi
 
 ### EDP 
 
-I feel like for now im still standing in step 3 
+I feel like for now im still standing more **towards 3 than 4** because I still don't feel confident in my idea or possible solution for my project but hoping by next year I have a clear goal on what I want to build for my project.
 
 
 ### Skills 
