@@ -9,7 +9,7 @@ Before the year ends, our teacher decided it's best that we continue building wi
 ### Tool
 During the time we had I went into examples of different features that Phaser had and found <a href="https://samme.github.io/phaser-examples-mirror/"> examples</a>, this helped me see what would I like to experiment with but also clarify if I was stuck on something from the documentation that I didn't understand well. Other videos from **YouTube** such as <a href = "https://youtu.be/ovMYA2_W6QE?si=q2_bXa9p9vzG3mfS">Animations video</a> and <a href = "https://youtu.be/RpTCJcGoWJg?si=A3-m3w_OEtmZZ5e8"> Animations video 2</a>,<a href="https://youtu.be/9gbxPkU4cn8?si=R-isqi-n0-vbSqo7"> What I can build</a>, <a href="https://youtu.be/HdEwhTcei2k?si=47etMs4Eq73wJoLY">Candy catching game</a>. 
 
-Websites such as <a href="https://shakuro.com/blog/phaser-js-a-step-by-step-tutorial-on-making-a-phaser-3-game#Part-7-Text-event-system-counter">Sakuro</a>, <a href="https://cragl.cs.gmu.edu/teaching/cs325/phaser-1.1.6/examples/"> More examples</a>.
+Websites such as <a href="https://shakuro.com/blog/phaser-js-a-step-by-step-tutorial-on-making-a-phaser-3-game#Part-7-Text-event-system-counter">Sakuro</a>, <a href="https://cragl.cs.gmu.edu/teaching/cs325/phaser-1.1.6/examples/">crag</a>.
 
 ---
 
