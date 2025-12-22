@@ -9,7 +9,7 @@ Before the year ends, our teacher decided it's best that we continue building wi
 
 ### Tool
 
-During the time we had I went into examples of different features that Phaser had and found [a href="https://samme.github.io/phaser-examples-mirror/"> examples</a>]
+During the time we had I went into examples of different features that Phaser had and found <a href="https://samme.github.io/phaser-examples-mirror/"> examples</a>, this helped me see what would I like to experiment with but also clarify if I was stuck on something from the documentation that I didn't understand well. Other videos from **YouTube** as well 
 
 
 ---
