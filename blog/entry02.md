@@ -7,6 +7,10 @@ After deciding what our tool will be, we have continued to tinker with it but al
 
 Before the year ends, our teacher decided it's best that we continue building with our tool. This allowed me to have an idea on what to focus on for this month, I jumped into more videos as it gave a lot of information and tips for projects that used my tool **Phaser**. Any website on the internet that can be helpful for beginners.
 
+### Tool
+
+During the time we had I went into examples of different features that Phaser had and found [a href="https://samme.github.io/phaser-examples-mirror/"> examples</a>]
+
 
 ---
 
