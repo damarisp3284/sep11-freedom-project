@@ -7,7 +7,9 @@ After deciding what our tool will be, we have continued to tinker with it but al
 Before the year ends, our teacher decided it's best that we continue building with our tool. This allowed me to have an idea on what to focus on for this month, I jumped into more videos as it gave a lot of information and tips for projects that used my tool **Phaser**. Any website on the internet that can be helpful for beginners. But with the break coming I didn't feel as productive as the 1st blog but tried my best to at least get stuff so I won't feel behind when it's time to code. 
 
 ### Tool
-During the time we had I went into examples of different features that Phaser had and found <a href="https://samme.github.io/phaser-examples-mirror/"> examples</a>, this helped me see what would I like to experiment with but also clarify if I was stuck on something from the documentation that I didn't understand well. Other videos from **YouTube** as well <a href = "https://youtu.be/ovMYA2_W6QE?si=q2_bXa9p9vzG3mfS"> Animations video</a> and <a href = "https://youtu.be/RpTCJcGoWJg?si=A3-m3w_OEtmZZ5e8"> Animations video 2</a>,<a href="https://youtu.be/9gbxPkU4cn8?si=R-isqi-n0-vbSqo7"> What I can build</a>
+During the time we had I went into examples of different features that Phaser had and found <a href="https://samme.github.io/phaser-examples-mirror/"> examples</a>, this helped me see what would I like to experiment with but also clarify if I was stuck on something from the documentation that I didn't understand well. Other videos from **YouTube** such as <a href = "https://youtu.be/ovMYA2_W6QE?si=q2_bXa9p9vzG3mfS">Animations video</a> and <a href = "https://youtu.be/RpTCJcGoWJg?si=A3-m3w_OEtmZZ5e8"> Animations video 2</a>,<a href="https://youtu.be/9gbxPkU4cn8?si=R-isqi-n0-vbSqo7"> What I can build</a>, <a href="https://youtu.be/HdEwhTcei2k?si=47etMs4Eq73wJoLY">Candy catching game</a>. 
+
+Websites such as <a href="https://shakuro.com/blog/phaser-js-a-step-by-step-tutorial-on-making-a-phaser-3-game#Part-7-Text-event-system-counter">Sakuro</a>, <a href="https://cragl.cs.gmu.edu/teaching/cs325/phaser-1.1.6/examples/"> More examples</a>.
 
 ---
 
