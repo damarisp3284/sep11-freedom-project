@@ -1,23 +1,53 @@
-var config = {
+let player;
+let cursors;
+let platforms;
+let stars;
+
+let score = 0;
+let scoreText;
+
+let health = 3;
+let healthText;
+
+
+const config = {
     type: Phaser.AUTO,
-    width: 800,
+    width : 800,
     height: 600,
-    scene: {
-        preload: function () {
-            this.load.image('sky', 'assets/sky.png');
-        },
-        create: function () {
-            this.add.image(400, 300, 'sky');
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 500 },
+            debug: false
         }
-    }
+    },
+    scene: { preload, create, update }
 };
 
-var game = new Phaser.Game(config);
+
+new Phaser.Game(config);
+
+function preload() {
+    this.load.image('ground', 'https://labs.phaser.io/assets/sprites/platform.png');
+    this.load.image('star', 'https://labs.phaser.io/assets/sprites/star.png');
+    this.load.image('sky', 'https://labs.phaser.io/assets/skies/space3.png');
+    this.load.spritesheet('dude',
+        'https://labs.phaser.io/assets/sprites/dude.png',
+        { frameWidth: 32, frameHeight: 48 }
+    );
+}
 
 function create () {
     this.add.image(400, 300, 'sky');
 
-    player = this.physics.add.sprite(400, 500, 'dude');
+    platforms = this.physics.add.staticGroup();
+    platforms.create(400, 568, 'ground').setScale(2).refreshBody();
+    platforms.create(600, 400, 'ground');
+    platforms.create(50, 250, 'ground');
+    platforms.create(750, 220, 'ground');
+
+    player = this.physics.add.sprite(100, 450, 'dude');
+    player.setBounce(0.2);
     player.setCollideWorldBounds(true);
 
     this.anims.create({
@@ -40,45 +70,99 @@ function create () {
         repeat: -1
     });
 
+    this.physics.add.collider(player, platforms);
+
     cursors = this.input.keyboard.createCursorKeys();
 
     stars = this.physics.add.group({
         key: 'star',
-        repeat: 10,
+        repeat: 11,
         setXY: { x: 12, y: 0, stepX: 70 }
     });
 
-    stars.children.iterate(function (child) {
-        child.setVelocityY(Phaser.Math.Between(100, 200));
-        child.setCollideWorldBounds(true);
+    stars.children.iterate(child => {
+        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
     });
 
-    scoreText = this.add.text(16, 16, 'Score: 0', { fontSize: '32px', fill: '#fff' });
+     this.physics.add.collider(stars, platforms);
+     this.physics.add.overlap(player, stars, collectStar, null, this);
 
-    this.physics.add.overlap(player, stars, collectStar, null, this);
+    scoreText = this.add.text(16, 16, 'score: 0', {
+        fontSize: '32px',
+        fill: '#fff'
+    });
+
+     healthText = this.add.text(16, 50, 'Health: 3', {
+        fontSize: '32px',
+        fill: '#fff'
+    });
+
+    enemies = this.physics.add.group();
+
+       spawnEnemy.call(this, 400, 450);
+       spawnEnemy.call(this, 700, 200);
+
+     this.physics.add.collider(enemies, platforms);
+    this.physics.add.collider(player, enemies, hitEnemy, null, this);
 }
 
-function update () {
-    if (cursors.left.isDown) {
-        player.setVelocityX(-160);
-        player.anims.play('left', true);
-    }
-    else if (cursors.right.isDown) {
+
+function update() {
+    if (cursors.left.isDown)
+        { player.setVelocityX(-160);
+          player.anims.play('left', true);
+     } else if (cursors.right.isDown) {
         player.setVelocityX(160);
         player.anims.play('right', true);
-    }
-    else {
+    } else {
         player.setVelocityX(0);
         player.anims.play('turn');
-    }
-
-    if (cursors.up.isDown && player.body.touching.down) {
+    } if (cursors.up.isDown && player.body.touching.down) {
         player.setVelocityY(-330);
     }
+
+    enemies.children.iterate(enemy => { if (enemy.body.blocked.right) {
+        enemy.setVelocityX(-50);
+    } else if (enemy.body.blocked.left) {
+        enemy.setVelocityX(50); }
+    });
 }
 
-function collectStar (player, star) {
+function collectStar(player, star) {
     star.disableBody(true, true);
     score += 10;
     scoreText.setText('Score: ' + score);
+ }
+
+
+function spawnEnemy(x, y) {
+    const enemy = enemies.create(x, y, 'dude');
+    enemy.setBounce(0.2);
+    enemy.setCollideWorldBounds(true);
+    enemy.setVelocityX(50);
 }
+
+
+function hitEnemy(player, enemy) {
+  health -= 1;
+  healthText.setText('Health: ' + health);
+
+  player.setVelocityY(-200);
+
+  player.setTint(0xff0000);
+  setTimeout(() => player.clearTint(), 200);
+
+  if (health <= 0) {
+    player.setTint(0xff0000);
+    player.anims.play('turn');
+    this.physics.pause();
+
+    setTimeout(() => {
+      this.scene.restart();
+      health = 3;
+    }, 1000);
+  }
+}
+
+
+
