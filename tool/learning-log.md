@@ -34,13 +34,14 @@
 
 1/14/26
 * Tinkered and tried to make a game
-   * Used some Phaser features such as animation
+   * Used some Phaser features such as animations
 <img width="900" height="586" alt="image" src="https://github.com/user-attachments/assets/49f2e261-ca5d-44d6-9df4-96dc8cd0b6b4" />
 <img width="770" height="635" alt="{2F23B048-E16F-4BD1-8440-8B33F50E19A8}" src="https://github.com/user-attachments/assets/afc653f0-35ed-4a92-af22-ca4465511def" />
 <img width="404" height="369" alt="{E1F179FC-95E0-439A-BEE1-48AD2C6A3115}" src="https://github.com/user-attachments/assets/59919819-72d2-4e47-be4c-11e1b6c7f2c3" />
 
 * Added a health bar
 * Enemies that move and take damage
+* Managed to make my characters animated 
 
   <img width="835" height="728" alt="{A9B011ED-282D-44D6-95E8-27087A810EB9}" src="https://github.com/user-attachments/assets/dc0a6ca6-d26f-4fcb-9753-42a23a7a40e4" />
   <img width="496" height="835" alt="{0DA9F912-DA8F-4E5D-8F34-F0B14DC9AD5B}" src="https://github.com/user-attachments/assets/a2fe2c66-3162-4c0a-994c-25ad8726be60" />
