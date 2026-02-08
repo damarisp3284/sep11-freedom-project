@@ -8,6 +8,19 @@ After winter break I took some time to think ahead on what I would like to tinke
 
 Seeing my past progress I decided to test out other features but then I realize I can use **DOM** using my tool, after reading over the documentation I started to brainstorm what I would like to create and looking over at a website called **Typing club** inspired me to create something similar to it as it helped me in the past will my typing stamina.
 
+Then I started to build the game but still using both **Phaser** and **DOM** which game me 
+
+<img width="530" height="562" alt="{DF2D7D2D-53D1-460A-A782-CB81B4BD4A78}" src="https://github.com/user-attachments/assets/fc8afa09-bc58-4464-9a65-568b9eb23670" />
+
+Once you press start it will give you a word to type but you are timed so it allows user's to test how fast they type while each word they manage to type correctly will give them a score 
+
+<img width="509" height="559" alt="{0C949AD0-A5C9-48CF-9DB1-8B08A2DD4316}" src="https://github.com/user-attachments/assets/c9284112-bae6-47a5-b937-71f78982fdc6" />
+
+After the 30 secound timer is up, the game is over!
+
+<img width="522" height="568" alt="{497251D1-FA8A-49EA-A166-9A8480E52BBF}" src="https://github.com/user-attachments/assets/3cda3584-5579-48ce-bf89-a5b836b9c674" />
+
+
 
 ---
 
