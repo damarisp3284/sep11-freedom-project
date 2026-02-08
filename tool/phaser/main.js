@@ -164,9 +164,12 @@
 //   }
 // }
 
+
+
+
 class StartMenu extends Phaser.Scene {
     constructor() {
-        super('StartMenu');
+        super({ key: 'StartMenu' });
     }
 
     create() {
@@ -175,24 +178,24 @@ class StartMenu extends Phaser.Scene {
             color: '#ffffff'
         }).setOrigin(0.5);
 
-        this.startButton = this.add.dom(400, 300).createFromHTML(`
-            <button id="startBtn" style="
-                padding: 15px 30px;
-                font-size: 24px;
-                cursor: pointer;
-            ">Start Game</button>
-        `);
-
-        const btn = this.startButton.getChildByID('startBtn');
-        btn.addEventListener('click', () => {
-            this.scene.start('TypingGame');
-        });
+        const startBtn = this.add.text(400, 300, 'Start Game', {
+            fontSize: '32px',
+            color: '#ffffff',
+            backgroundColor: '#333',
+            padding: { x: 20, y: 10 }
+        })
+        .setOrigin(0.5)
+        .setInteractive({ useHandCursor: true })
+        .on('pointerdown', () => this.scene.start('TypingGame'))
+        .on('pointerover', () => startBtn.setStyle({ backgroundColor: '#555' }))
+        .on('pointerout', () => startBtn.setStyle({ backgroundColor: '#333' }));
     }
 }
 
+
 class TypingGame extends Phaser.Scene {
     constructor() {
-        super('TypingGame');
+        super({ key: 'TypingGame', dom: { createContainer: true } });
     }
 
     create() {
@@ -207,18 +210,17 @@ class TypingGame extends Phaser.Scene {
             color: '#3258a8'
         }).setOrigin(0.5);
 
-       
         this.scoreText = this.add.text(400, 50, 'Score: 0', {
             fontSize: '32px',
-            color: '#ffffff'
+            color: '#d93125'
         }).setOrigin(0.5);
 
         this.timerText = this.add.text(400, 130, 'Time: 30', {
             fontSize: '32px',
-            color: '#ff4444'
+            color: '#128036'
         }).setOrigin(0.5);
 
-
+        // DOM INPUT BOX
         this.inputBox = this.add.dom(400, 300).createFromHTML(`
             <input id="typeBox" type="text" placeholder="Type Here" style="
                 padding: 10px;
@@ -228,7 +230,10 @@ class TypingGame extends Phaser.Scene {
             ">
         `);
 
+        this.inputBox.setOrigin(0.5);
+
         const element = this.inputBox.getChildByID('typeBox');
+        element.focus();
 
         element.addEventListener('keyup', (event) => {
             if (event.key === 'Enter') {
@@ -236,7 +241,6 @@ class TypingGame extends Phaser.Scene {
                 element.value = '';
             }
         });
-
 
         this.timerEvent = this.time.addEvent({
             delay: 1000,
@@ -266,9 +270,10 @@ class TypingGame extends Phaser.Scene {
     }
 }
 
+
 class GameOver extends Phaser.Scene {
     constructor() {
-        super('GameOver');
+        super({ key: 'GameOver' });
     }
 
     init(data) {
@@ -278,28 +283,28 @@ class GameOver extends Phaser.Scene {
     create() {
         this.add.text(400, 150, 'Game Over', {
             fontSize: '48px',
-            color: '#ffffff'
+            color: '#26bdb3'
         }).setOrigin(0.5);
 
         this.add.text(400, 230, 'Score: ' + this.finalScore, {
             fontSize: '32px',
-            color: '#ffffff'
+            color: '#128036'
         }).setOrigin(0.5);
 
-        this.restartButton = this.add.dom(400, 350).createFromHTML(`
-            <button id="restartBtn" style="
-                padding: 15px 30px;
-                font-size: 24px;
-                cursor: pointer;
-            ">Play Again</button>
-        `);
-
-        const btn = this.restartButton.getChildByID('restartBtn');
-        btn.addEventListener('click', () => {
-            this.scene.start('StartMenu');
-        });
+        const restartBtn = this.add.text(400, 350, 'Play Again', {
+            fontSize: '32px',
+            color: '#ffffff',
+            backgroundColor: '#333',
+            padding: { x: 20, y: 10 }
+        })
+        .setOrigin(0.5)
+        .setInteractive({ useHandCursor: true })
+        .on('pointerdown', () => this.scene.start('StartMenu'))
+        .on('pointerover', () => restartBtn.setStyle({ backgroundColor: '#555' }))
+        .on('pointerout', () => restartBtn.setStyle({ backgroundColor: '#333' }));
     }
 }
+
 
 const config = {
     type: Phaser.AUTO,
@@ -312,4 +317,5 @@ const config = {
 };
 
 new Phaser.Game(config);
+
 
