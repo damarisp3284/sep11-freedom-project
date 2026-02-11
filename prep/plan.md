@@ -1,7 +1,7 @@
 # Plan
 
-## Tool: 
-## Product: 
+## Tool: Phaser
+## Product: Data Protection Game 
 
 ---
 
@@ -9,13 +9,20 @@
 
 #### MVP
 
-- [ ] Task (deadline: X)
-  - [ ] Subtask (deadline: X)
-
+**Deadline - March** 
+- [ ] Create Layout for game (deadline: Late feb- early march)
+  - [ ] If stuck find references but don't copy (brainstorming) 
+- [ ] Add in features (deadline: March)
+  - [ ] Create scene (Test bugs before proceeding) 
+  - [ ] Adding in characters + items (From Phaser) 
+    - [ ] Make characters interactive with items in background
+  - [ ] 
 #### Beyond MVP
 
-- [ ] Task
-  - [ ] Subtask
+- [ ] Add in colors, fonts etc 
+  - [ ] Colors:
+- [ ] Fix any bugs
+- [ ] Including anything else I would like to add 
 
 
 <!-- EXAMPLE
