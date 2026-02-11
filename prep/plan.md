@@ -9,18 +9,22 @@
 
 #### MVP
 
-**Deadline - March** 
-- [ ] Create Layout for game (deadline: Late feb- early march)
+**Deadline - Late Feb - March** 
+
+**Beginning**
+- [ ] Create Layout for game (deadline: Late feb before March 1st)
   - [ ] If stuck find references but don't copy (brainstorming) 
-- [ ] Add in features (deadline: March)
-  - [ ] Create scene (Test bugs before proceeding) 
-  - [ ] Adding in characters + items (From Phaser) 
-    - [ ] Make characters interactive with items in background
-  - [ ] 
+ 
+**Work in progress(Coding)**
+- [ ] Add in beginning features: (deadline: March 15)
+  - [ ] Create scene (Test bugs for all before proceeding) 
+  - [ ] Adding in characters + items (From Phaser)
+  - [ ] Create Basic Movements
+- [ ]  
 #### Beyond MVP
 
 - [ ] Add in colors, fonts etc 
-  - [ ] Colors:
+  - [ ] Colors: #db1d39, #7632cf, #5fc998
 - [ ] Fix any bugs
 - [ ] Including anything else I would like to add 
 
