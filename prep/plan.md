@@ -13,7 +13,8 @@
 
 **Beginning**
 - [ ] Create Layout for game (deadline: Late feb before March 1st)
-  - [ ] If stuck find references but don't copy (brainstorming) 
+  - [ ] If stuck find references but don't copy (brainstorming)
+  - [ ]  Including game plan/story line if wanted to create as a story mode 
  
 **Work in progress(Coding)**
 - [ ] Add in beginning features: 
@@ -23,7 +24,8 @@
 - [ ]  Make map interactive
   - [ ] Check for bugs
 - [ ] Apply functions and conditionals
-- [ ] Used these for when problems are solved incorrectly/giving prizes for correct answers(Due March 22)
+- [ ] Used these for when problems are solved incorrectly/giving prizes for correct answers(Below: Due March 22)
+- [ ] Add in story line/ story plot
 #### Beyond MVP
 
 - [ ] Add in colors, fonts etc 
