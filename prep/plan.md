@@ -16,11 +16,14 @@
   - [ ] If stuck find references but don't copy (brainstorming) 
  
 **Work in progress(Coding)**
-- [ ] Add in beginning features: (deadline: March 15)
-  - [ ] Create scene (Test bugs for all before proceeding) 
+- [ ] Add in beginning features: 
+  - [ ] Create scene (Test bugs for all before proceeding) **Due March 6**
   - [ ] Adding in characters + items (From Phaser)
-  - [ ] Create Basic Movements
-- [ ]  
+  - [ ] Create Basic Movements(All above due March 13th)
+- [ ]  Make map interactive
+  - [ ] Check for bugs
+- [ ] Apply functions and conditionals
+- [ ] Used these for when problems are solved incorrectly/giving prizes for correct answers(Due March 22)
 #### Beyond MVP
 
 - [ ] Add in colors, fonts etc 
