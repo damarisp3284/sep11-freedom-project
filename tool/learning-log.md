@@ -17,7 +17,7 @@
 * Modified the version of Phaser's create your own game to my version
 * Instead of collectiing coins I tried to make it collect stars
 * Some challenges I had was that the screen came out blank when I tried to test it
-* I will try to use more physics features and animations 
+* I will try to use more physics features and animations
 
  <img width="444" height="384" alt="{0E8AC5FA-5CE9-446F-9AC9-2C9B892A6368}" src="https://github.com/user-attachments/assets/7f42a4c5-2434-4622-afab-b02b3e61baac" />
 
@@ -27,7 +27,7 @@
 
 11/23/25
 * Watched more vidoes before being confident in doing other phaser features
-  * Saw a into to refresh my mind: <a href = "https://youtu.be/X9DiAJuLJgk?si=wrgP6hqpr5__SdeX">Video</a> 
+  * Saw a into to refresh my mind: <a href = "https://youtu.be/X9DiAJuLJgk?si=wrgP6hqpr5__SdeX">Video</a>
 * <a href = "https://youtu.be/ovMYA2_W6QE?si=q2_bXa9p9vzG3mfS"> Animations video</a>
 * <a href = "https://youtu.be/RpTCJcGoWJg?si=A3-m3w_OEtmZZ5e8"> Animations video 2</a>
 
@@ -41,10 +41,16 @@
 
 * Added a health bar
 * Enemies that move and take damage
-* Managed to make my characters animated 
+* Managed to make my characters animated
 
   <img width="835" height="728" alt="{A9B011ED-282D-44D6-95E8-27087A810EB9}" src="https://github.com/user-attachments/assets/dc0a6ca6-d26f-4fcb-9753-42a23a7a40e4" />
   <img width="496" height="835" alt="{0DA9F912-DA8F-4E5D-8F34-F0B14DC9AD5B}" src="https://github.com/user-attachments/assets/a2fe2c66-3162-4c0a-994c-25ad8726be60" />
+
+
+
+3/1/26
+* Decided to add some type of currency that users can get or collect throught the game
+* 
 
 
 
