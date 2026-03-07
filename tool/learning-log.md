@@ -46,7 +46,20 @@
   <img width="835" height="728" alt="{A9B011ED-282D-44D6-95E8-27087A810EB9}" src="https://github.com/user-attachments/assets/dc0a6ca6-d26f-4fcb-9753-42a23a7a40e4" />
   <img width="496" height="835" alt="{0DA9F912-DA8F-4E5D-8F34-F0B14DC9AD5B}" src="https://github.com/user-attachments/assets/a2fe2c66-3162-4c0a-994c-25ad8726be60" />
 
-
+3/7/26
+* With all the time we had to learn about our tool decided to create a game
+* Create health bars
+* Let user catch letters that will be good for a password
+   * Using <a href = "https://docs.phaser.io/phaser/concepts/gameobjects#creating-a-game-object"> game objects from the documentation </a>
+* Saw <a href ="https://youtu.be/gY6-vlnbaSU?si=Re4dfjaowNpB50l9"> Phaser Video as reference </a>
+   * Like how you can use a claw machine which I would like but it I prefer it to be a box instead   
+* Create score and if the letters aren't suitable then user's score will decrease
+* Will still look into other ideas such as an encryption game
+   * Which will be a puzzle game
+* Wondering if I could merge these 2 ideas together and if I could
+   * How will I try my game to look like or what is my goal with this?
+* Would like to test things using Physics
+   * Considering to tinker and see if I would like to include it   
 
 <!--
 * Links you used today (websites, videos, etc)
