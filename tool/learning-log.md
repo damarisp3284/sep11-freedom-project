@@ -9,7 +9,8 @@
 ### 10/27/25:
 * Started to create my own mini-games as a way to test my knowledge with what I have learned
 * Used the properties of animation and actions to see what elements I would like to add into my game
-*
+
+---
 
 ### 11/15/25:
 * Watched videos on Youtube to create games
@@ -25,12 +26,15 @@
 
 <img width="365" height="367" alt="{04C0BEC0-6625-4B09-B224-56CBF88D2A61}" src="https://github.com/user-attachments/assets/6e0c9a72-fe48-455a-a53e-08be23116e29" />
 
+---
+
 11/23/25
 * Watched more vidoes before being confident in doing other phaser features
   * Saw a into to refresh my mind: <a href = "https://youtu.be/X9DiAJuLJgk?si=wrgP6hqpr5__SdeX">Video</a> 
 * <a href = "https://youtu.be/ovMYA2_W6QE?si=q2_bXa9p9vzG3mfS"> Animations video</a>
 * <a href = "https://youtu.be/RpTCJcGoWJg?si=A3-m3w_OEtmZZ5e8"> Animations video 2</a>
 
+---
 
 1/14/26
 * Tinkered and tried to make a game
@@ -45,6 +49,8 @@
 
   <img width="835" height="728" alt="{A9B011ED-282D-44D6-95E8-27087A810EB9}" src="https://github.com/user-attachments/assets/dc0a6ca6-d26f-4fcb-9753-42a23a7a40e4" />
   <img width="496" height="835" alt="{0DA9F912-DA8F-4E5D-8F34-F0B14DC9AD5B}" src="https://github.com/user-attachments/assets/a2fe2c66-3162-4c0a-994c-25ad8726be60" />
+
+---
 
 3/7/26
 * With all the time we had to learn about our tool decided to create a game
