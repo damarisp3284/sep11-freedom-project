@@ -1,7 +1,7 @@
 # Plan
 
-## Tool: 
-## Product: 
+## Tool: Phaser
+## Product: Data Protection Game 
 
 ---
 
@@ -9,13 +9,29 @@
 
 #### MVP
 
-- [ ] Task (deadline: X)
-  - [ ] Subtask (deadline: X)
+**Deadline - Late Feb - March** 
 
+**Beginning**
+- [ ] Create Layout for game (deadline: Late feb before March 1st)
+  - [ ] If stuck find references but don't copy (brainstorming)
+  - [ ]  Including game plan/story line if wanted to create as a story mode 
+ 
+**Work in progress(Coding)**
+- [ ] Add in beginning features: 
+  - [ ] Create scene (Test bugs for all before proceeding) **Due March 6**
+  - [ ] Adding in characters + items (From Phaser)
+  - [ ] Create Basic Movements(All above due March 13th)
+- [ ]  Make map interactive
+  - [ ] Check for bugs
+- [ ] Apply functions and conditionals
+- [ ] Used these for when problems are solved incorrectly/giving prizes for correct answers(Below: Due March 22)
+- [ ] Add in story line/ story plot
 #### Beyond MVP
 
-- [ ] Task
-  - [ ] Subtask
+- [ ] Add in colors, fonts etc 
+  - [ ] Colors: #db1d39, #7632cf, #5fc998
+- [ ] Fix any bugs
+- [ ] Including anything else I would like to add 
 
 
 <!-- EXAMPLE
