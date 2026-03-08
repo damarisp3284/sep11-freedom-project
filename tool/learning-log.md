@@ -67,9 +67,7 @@
 * Would like to test things using Physics
    * Considering to tinker and see if I would like to include it   
 
-3/1/26
-* Decided to add some type of currency that users can get or collect throught the game
-* 
+
 
 
 
