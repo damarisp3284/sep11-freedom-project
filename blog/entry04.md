@@ -7,6 +7,8 @@ As we are at a good point to start to brainstorm ideas for our freedom project w
 
 I used my past tinker projects and videos from my learning log and decided to use <a href = "https://docs.phaser.io/phaser/concepts/gameobjects#creating-a-game-object"> game objects from the documentation </a> to make an interactive game that user's can move freely, using this <a href ="https://youtu.be/gY6-vlnbaSU?si=Re4dfjaowNpB50l9"> video as reference </a> from what I have tinkered with and I liked some of the projects that were created so I would like to build something of my own version using things like a score and health bar. This has lead me to think if I would like a puzzle game using **encryption** with the goal is that user's will have to encrypt messages or go with a game that user's will catch words that are good when creating passwords but wrong letters will decrease user's score and will take away a life.
 
+I also plan to use **physics** and see if it fits my project idea or not as tinkering with it makes arcade games look better and would fit best with my interactive game idea that I have.
+
 ### EDP
 
 Im currently between 4 and 5 since I have some ideas but I don't want to spend to much time on thinking and start building since time goes quick but I have a strong feeling I will go towards my encryption game since I can use my knowledge from **my summer program at NYU** and give user's problems to solve in order to win, as well as merge the 2 ideas that I have and test if it fits with what I like or not. With setting deadlines for myself have helped me not slack and do everything last minute which helped me stay on task and focus on my freedom project.  
