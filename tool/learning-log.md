@@ -1,4 +1,4 @@
-# Tool Learning Log
+ Tool Learning Log
 
 ## Tool: **Phaser**
 
@@ -67,7 +67,16 @@
 * Would like to test things using Physics
    * Considering to tinker and see if I would like to include it   
 
+---
 
+3/20/26
+* Looked more further into <a href ="https://phaser.io/examples/v3.85.0/physics">physics</a>
+  * Learned what physics can make in games
+  * Would looked good if I add it into an interactive game
+* <a href = "https://youtu.be/MtmGG28e8oQ?si=faQXwTJrbRJzLCr-">Video about Physics</a>
+* <a href ="https://youtu.be/gIMXl3jZ3rA?si=p5WvbTXig7X0mOn0">Intro into using Physics</a>
+* Decided into make a puzzle game
+  * Thinking if I should tinker with physics and add it into my project 
 
 
 
