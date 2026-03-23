@@ -78,6 +78,9 @@
 * Decided into make a puzzle game
   * Thinking if I should tinker with physics and add it into my project 
 
+3/23/26
+* Trying to tinker with physics properties specifically **arcade physics** since it's  good for retro games
+ * Need to debug since game isn't loading  
 
 
 <!--
