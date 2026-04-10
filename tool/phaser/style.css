@@ -1,32 +1,7 @@
-/* body {
-    margin: 0;
-    background: #111;
-    color:#fff;
-    font-family: sans-serif
-} */
-
+body {
+    margin: 0; background: #111;
+}
 
 canvas {
-    position: relative;
-    z-index: 1;
-}
-
-.dom-container {
-    position: absolute;
-    z-index: 10 !important;
-    top: 0;
-    left: 0;
-    width: 800px !important;
-    height: 600px !important;
-    z-index: 9999 !important;
-    pointer-events: auto !important;
-    background: rgba(255, 0, 0, 0.2);
-}
-
-#game {
-    width: 800px;
-    height: 600px;
-    z-index: 9999 !important;
-    margin: 0 auto;
-    position: relative;
+    display: block; margin: auto;
 }
