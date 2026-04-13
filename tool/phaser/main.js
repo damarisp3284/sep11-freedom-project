@@ -17,10 +17,10 @@ class MainScene extends Phaser.Scene {
         this.barBg = this.add.rectangle(400,100,300,30,0x333333);
         this.barFill = this.add.rectangle(250, 100,0,30,0x333333);
 
-        this.strengthText = this.add.text(50,50, 'Strength: 0',{
+        this.strengthText = this.add.text(80,80, 'Strength: 0',{
             fontSize: '32px',
             fill: '#ffffff'
-        }).setOrigin(0.5);
+        }).setOrigin(0);
 
         const icons = [
             { key: 'upper', x: 100, y:200 },
