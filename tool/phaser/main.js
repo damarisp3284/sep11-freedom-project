@@ -110,7 +110,9 @@ class MainScene extends Phaser.Scene {
               (c >= 'a' && c <= 'z') ||
               (c >= '0' && c <= '9'))
         );
-        if (hasSymbol) score += 25;
+        if (hasSymbol) {
+            score += 25;
+        }
 
         this.strengthText.setText('Strength: ' + score);
 
@@ -138,7 +140,6 @@ class MainScene extends Phaser.Scene {
         this.points += score;
         this.pointsText.setText('Points: ' + this.points);
     }
-}
 
 var config = {
     type: Phaser.AUTO,
