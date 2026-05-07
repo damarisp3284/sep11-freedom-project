@@ -80,10 +80,6 @@ class MainScene extends Phaser.Scene {
             });
         });
 
-        this.passwordInput = document.getElementById('passwordInput');
-        this.input.keyboard.on('keydown-ENTER', () => {
-            this.checkPasswordStrength(this.passwordInput.value);
-        });
 
         this.timeLeft = 30;
         this.points = 0;
@@ -111,6 +107,22 @@ class MainScene extends Phaser.Scene {
             loop: true
         });
 
+         this.keyInputs = []
+
+        this.input.keyboard.on('keydown', (event) => {
+            if (event.key.length === 1){
+                this.keyInputs.push(event.key);
+                console.log(this.keyInputs)
+            }
+        });
+
+         this.input.keyboard.on('keydown-ENTER', () => {
+            let password = this.keyInputs.join('');
+            this.checkPasswordStrength(password);
+            this.keyInputs = [];
+        });
+    }
+    
         addTime(scrore) {
             if(score === 100) {
                 this.timeLeft += 10;
@@ -131,21 +143,6 @@ class MainScene extends Phaser.Scene {
             this.pointsText.setText('Points: ' + this.points);
         }
 
-        this.keyInputs = []
-        let password = this.keyInputs.join('');
-
-        this.input.keyboard.on('keydown', (event) => {
-            if (event.key.length === 1){
-                this.keyInputs.push(event.key);
-                console.log(this.keyInputs)
-            }
-        });
-
-        this.input.keyboard.on('keydown-ENTER', () => {
-            let password = this.keyInputs.join('');
-            this.checkPasswordStrength(password);
-            this.keyInputs = [];
-        });
 
         let hasUpper = false;
         for(let i = 0; i < password.length; i++) {
@@ -173,7 +170,7 @@ class MainScene extends Phaser.Scene {
                     break;
                 }
             }
-    }
+
 
 
 
