@@ -72,49 +72,25 @@ class MainScene extends Phaser.Scene {
     checkPasswordStrength(password) {
         let score = 0;
 
-        if(password.length >= 8) {
-            score += 25
-        };
+        if (password.length >= 8) score += 25;
 
-        let hasUpper = false;
-        for(let c of password) {
-            if(c >= 'A' && c <= 'Z') {
-                hasUpper = true;
-                break;
-            }
-        }
-        if (hasUpper) {
-            score += 25
-        };
+        let hasUpper = [...password].some(c => c >= 'A' && c <= 'Z');
+        if (hasUpper) score += 25;
 
-        let hasNumber = false;
-        for(let c of password) {
-            if(c >= '0' && c <= '9') {
-                hasNumber = true;
-                break;
-            }
-        }
-        if(hasNumber) {
-            score += 25
-        };
+        let hasNumber = [...password].some(c => c >= '0' && c <= '9');
+        if (hasNumber) score += 25;
 
-        let hasSymbol = false;
-        for(let i = 0; i < password.length; i++) {
-            let c = password[i];
-            if(!((c >= 'A' && c <= 'Z') ||
-                (c >= 'a' && c <= 'z') ||
-                (c >= '0' && c <= '9'))) {
-                    hasSymbol = true;
-                    break;
-                }
-            }
-            if(hasSymbol) {
-                score += 25
-            };
+        let hasSymbol = [...password].some(c =>
+            !((c >= 'A' && c <= 'Z') ||
+              (c >= 'a' && c <= 'z') ||
+              (c >= '0' && c <= '9'))
+        );
+        if (hasSymbol) score += 25;
 
-            this.addTime(score);
-            this.addPoints(score);
+        this.strengthText.setText('Strength: ' + score);
 
+        this.addTime(score);
+        this.addPoints(score);
     }
 
     addTime(score) {
