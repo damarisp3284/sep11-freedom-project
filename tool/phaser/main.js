@@ -118,11 +118,15 @@ class MainScene extends Phaser.Scene {
         if (hasSymbol) {
             score += 25;
         }
+        if(score <= 25){
+            this.shakeInputBox();
+        }
 
+        if(score === 100) {
+            this.flashGreen();
+        }
+        
         this.strengthText.setText('Strength: ' + score);
-
-        this.addTime(score);
-        this.addPoints(score);
     }
 
     addTime(score) {
@@ -144,6 +148,25 @@ class MainScene extends Phaser.Scene {
     addPoints(score) {
         this.points += score;
         this.pointsText.setText('Points: ' + this.points);
+    }
+
+    shakeInputBox() {
+        this.tweens.add({
+            targets: this.inputbox,
+            x: {from: 400 - 10, to: 400 + 10},
+            duration: 50,
+            yoyo, true,
+            repeat: 4
+        });
+    }
+
+    flashGreen() {
+        this.tweens.add({
+            targets: this.inputbox,
+            fillColor: 0x00ff00,
+            duration: 150,
+            yoyo: true
+        });
     }
 }
 var config = {
