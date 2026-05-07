@@ -153,7 +153,6 @@ class MainScene extends Phaser.Scene {
 
         this.strengthText.setText('Strength: ' + score);
 
-        // this.addTime(score);
         this.addPoints(score);
     }
 
@@ -175,22 +174,6 @@ class MainScene extends Phaser.Scene {
             yoyo: true
         });
     }
-
-    // addTime(score) {
-    //     if(score === 100) {
-    //         this.timeLeft += 10;
-    //     } else if(score >= 75) {
-    //         this.timeLeft += 7;
-    //     } else if (score >= 50) {
-    //         this.timeLeft += 5;
-    //     } else if (score >= 25) {
-    //         this.timeLeft += 3;
-    //     } else {
-    //         this.timeLeft += 1;
-    //     }
-
-    //     this.timerText.setText('Time: ' + this.timeLeft);
-    // }
 
     addPoints(score) {
         this.points += score;
