@@ -147,9 +147,7 @@ class MainScene extends Phaser.Scene {
             !((c >= 'A' && c <= 'Z') ||
               (c >= 'a' && c <= 'z') ||
               (c >= '0' && c <= '9'))
-        )) {
-            score += 25;
-        }
+        )) 
 
         this.strengthText.setText('Strength: ' + score);
 
