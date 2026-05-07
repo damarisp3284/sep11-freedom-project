@@ -116,15 +116,16 @@ class MainScene extends Phaser.Scene {
         if (hasSymbol) {
             score += 25;
         }
-        if(score <= 25){
+
+        this.strengthText.setText('Strength: ' + score);
+
+         if(score <= 25){
             this.shakeInputBox();
         }
 
         if(score === 100) {
             this.flashGreen();
         }
-
-        this.strengthText.setText('Strength: ' + score);
     }
 
     addTime(score) {
