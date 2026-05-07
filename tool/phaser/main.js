@@ -9,15 +9,15 @@ class StartScene extends Phaser.Scene {
             color: '#312ed1'
         }).setOrigin(0.5)
 
-        this.add.text(400, 259,
-            `* Create a password
+        this.add.text(280, 259,
+        `   * Create a password
             * Press ENTER to submit it
             * If password isnt good enough it cant be entered
             * Stronger the password the more points!
             * When time reaches 0, game ends`,
             {
-                fontSize: '26px',
-                color: '#312ed1'
+                fontSize: '22px',
+                color: '#312ed1',
                 align: 'center'
             }).setOrigin(0.5);
 
@@ -68,12 +68,12 @@ class MainScene extends Phaser.Scene {
     this.timeLeft = 45;
     this.points = 0;
 
-    this.timerText = this.add.text(600,50, 'Time: 45',{
+    this.timerText = this.add.text(580,50, 'Time: 45',{
             fontSize:'32px',
             color: '#6c1ddb'
         });
 
-        this.pointsText = this.add.text(600, 90, 'Points: 0',{
+        this.pointsText = this.add.text(580, 90, 'Points: 0',{
             fontSize: '32px',
             color: '#6c1ddb'
         });
