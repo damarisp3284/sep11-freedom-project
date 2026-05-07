@@ -9,7 +9,7 @@ class MainScene extends Phaser.Scene {
         this.load.image("symbol", "https://dummyimage.com/80x80/4444ff/ffffff&text=%23");
         this.load.image("length", "https://dummyimage.com/80x80/ffaa00/ffffff&text=L");
     }
-}
+
 
     create() {
 
