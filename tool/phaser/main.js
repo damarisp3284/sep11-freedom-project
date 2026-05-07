@@ -113,6 +113,9 @@ class MainScene extends Phaser.Scene {
             score += 25;
         }
 
+        this.keyInputs.push(event.key);
+        this.typedText.setText(this.keyInputs).join('')
+
         this.strengthText.setText('Strength: ' + score);
 
         this.addTime(score);
