@@ -70,10 +70,11 @@ class MainScene extends Phaser.Scene {
             this.keyInputs = []
             this.typedText.setText('');
         });
+    }
 
         tickTimer() {
-        this.timeLeft--;
-        this.timerText.setText('Time: ' + this.timeLeft);
+            this.timeLeft--;
+            this.timerText.setText('Time: ' + this.timeLeft);
 
         if (this.timeLeft > 0) {
             this.time.addEvent({
@@ -90,13 +91,19 @@ class MainScene extends Phaser.Scene {
     checkPasswordStrength(password) {
         let score = 0;
 
-        if (password.length >= 8) score += 25;
+        if (password.length >= 8){
+            score += 25;
+        }
 
         let hasUpper = [...password].some(c => c >= 'A' && c <= 'Z');
-        if (hasUpper) score += 25;
+        if (hasUpper) {
+            score += 25;
+        }
 
         let hasNumber = [...password].some(c => c >= '0' && c <= '9');
-        if (hasNumber) score += 25;
+        if (hasNumber) {
+            score += 25;
+        }
 
         let hasSymbol = [...password].some(c =>
             !((c >= 'A' && c <= 'Z') ||
