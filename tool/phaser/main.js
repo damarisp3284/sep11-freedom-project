@@ -52,14 +52,12 @@ class MainScene extends Phaser.Scene {
             if (event.key.length === 1) {
                 if (this.keyInputs.length < this.maxChars) {
                 this.keyInputs.push(event.key);
-                this.typedText.setText(this.keyInputs.join(''));
             }
         }
 
 
         if (event.key === "Backspace") {
             this.keyInputs.pop();
-            this.typedText.setText(this.keyInputs.join(''));
         }
 
         let password = this.keyInputs.join('');
@@ -125,7 +123,7 @@ class MainScene extends Phaser.Scene {
         if(score === 100) {
             this.flashGreen();
         }
-        
+
         this.strengthText.setText('Strength: ' + score);
     }
 
