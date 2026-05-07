@@ -56,15 +56,16 @@ class MainScene extends Phaser.Scene {
             }
         }
 
-         this.keyInputs.push(event.key);
-        let password = this.keyInputs.join('');
-        this.typedText.setText(password);
-        this.updateLiveStrength(password);
 
         if (event.key === "Backspace") {
             this.keyInputs.pop();
             this.typedText.setText(this.keyInputs.join(''));
         }
+
+        let password = this.keyInputs.join('');
+        this.typedText.setText(password);
+        this.updateLiveStrength(password);
+
     });
 
     this.keyInputs.push(event.key);
