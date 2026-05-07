@@ -16,7 +16,7 @@ class MainScene extends Phaser.Scene {
 
      this.inputbox = this.add.rectangle(400, 550, 700, 50, 0xffffff).setStrokeStyle(2, 0x000000).setOrigin(0.5);
 
-    this.typedText = this.add.text(60 550, '', {
+    this.typedText = this.add.text(60, 550, '', {
         fontSize: '28px',
         color: '#5fc998'
     });
