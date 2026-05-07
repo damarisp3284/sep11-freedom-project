@@ -123,7 +123,7 @@ class MainScene extends Phaser.Scene {
         });
     }
 
-    checkPaswordStrength(password) {
+    checkPasswordStrength(password) {
         let score = 0;
 
         if(password.length >= 8) {
@@ -132,7 +132,7 @@ class MainScene extends Phaser.Scene {
 
         let hasUpper = false;
         for(let c of password) {
-            if(c >= 'A' && <= 'Z') {
+            if(c >= 'A' && c <= 'Z') {
                 hasUpper = true;
                 break;
             }
