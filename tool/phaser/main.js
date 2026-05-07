@@ -18,7 +18,11 @@ class MainScene extends Phaser.Scene {
         }
 
     create() {
-       
+       this.typedText = this.add.text(50, 30, '', {
+            fontSize:'28px',
+            color:'#5fc998'
+       });
+
         this.timeLeft = 30;
         this.points = 0;
 
@@ -45,20 +49,26 @@ class MainScene extends Phaser.Scene {
             loop: true
         });
 
-         this.keyInputs = []
-
         this.input.keyboard.on('keydown', (event) => {
             if (event.key.length === 1){
                 this.keyInputs.push(event.key);
-                console.log(this.keyInputs)
+                this.typedText.setText(this.keyInputs.join(''));
+            }
+
+            if(event.key === 'Backspace') {
+                this.keyInputs.pop();
+                this.typedText(this.keyInputs.join (''));
             }
         });
 
-         this.input.keyboard.on('keydown-ENTER', () => {
+        this.input.keyboard.on('keydown-ENTER', () => {
             let password = this.keyInputs.join('');
             this.checkPasswordStrength(password);
-            this.keyInputs = [];
-        });
+
+            this.keyInputs = []
+            this.typedText.setText('');
+        })
+
     }
 
     checkPasswordStrength(password) {
