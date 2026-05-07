@@ -28,17 +28,17 @@ class MainScene extends Phaser.Scene {
 
     this.timerText = this.add.text(600,50, 'Time: 45',{
             fontSize:'32px',
-            color: '#7632cf'
+            color: '#6c1ddb'
         });
 
         this.pointsText = this.add.text(600, 90, 'Points: 0',{
             fontSize: '32px',
-            color: '#7632cf'
+            color: '#6c1ddb'
         });
 
         this.strengthText = this.add.text(580, 130, 'Strength: 0', {
             fontSize: '32px',
-            color: '#7632cf'
+            color: '#6c1ddb'
         });
 
         this.time.addEvent({
@@ -203,7 +203,7 @@ var config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
-    backgroundColor: '#1d98db'
+    backgroundColor: '#1d92db',
     scene: [MainScene]
 };
 
