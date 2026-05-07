@@ -10,6 +10,12 @@ class MainScene extends Phaser.Scene {
         this.load.image("length", "https://dummyimage.com/80x80/ffaa00/ffffff&text=L");
     }
 
+     shuffle(array) {
+            for(let i = array.length -1; i > 0; i--) {
+                let j = Math.floor(Math.random() * (i + 1))
+                [array[i], array[j]] =[array[j], array[i]]
+            }
+        }
 
     create() {
         this.strength = 0;
@@ -22,12 +28,14 @@ class MainScene extends Phaser.Scene {
             fill: '#ffffff'
         });
 
-        const icons = [
+        let icons = [
             { key: 'upper', x: 100, y:200 },
             { key: 'number', x: 250, y: 200 },
             { key: 'symbol', x: 400, y: 200 },
             { key: 'length', x: 550, y: 200 }
         ];
+
+        this.shuffle(icons);
 
         icons.forEach(icon => {
             const img = this.add.image(icon.x, icon.y, icon.key)
@@ -72,7 +80,75 @@ class MainScene extends Phaser.Scene {
             });
         });
 
+        this.passwordInput = document.getElementById('passwordInput');
+        this.input.keyboard.on('keydown-ENTER', () => {
+            this.checkPasswordStrength(this.passwordInput.value);
+        });
+
+        this.timeLeft = 30;
+        this.points = 0;
+
+        this.timerText = this.add.text(600,50, 'Time: 45',{
+            fontSize:'32px',
+            color: '#7632cf'
+        });
+
+        this.pointsText = this.add.text(600, 100, 'Points: 0',{
+            fontSize: '32px',
+            color: '#7632cf'
+        });
+
+        this.time.addEvent({
+            delay: 1000,
+            callback: () => {
+                this.timeLeft--;
+                this.timeText.setText('Time: ' + this.timeLeft);
+
+                if(this.timeLeft <= 0) {
+                    this.scene.restart();
+                }
+            },
+            loop: true
+        });
+
+        addTime(scrore) {
+            if(score === 100) {
+                this.timeLeft += 10;
+            } else if (score >= 75) {
+                this.timeLeft += 7;
+            } else if (score >= 50) {
+                this.timeLeft += 5;
+            } else if(score >= 25) {
+                this.timeLeft += 3;
+            } else {
+                this.timeLeft += 1;
+            }
+            this.timerText.setText('Time: ' + this.timeLeft);
+        }
+
+        addPoints(score) {
+            this.points += score;
+            this.pointsText.setText('Points: ' + this.points);
+        }
+
+        this.keyInputs = []
+        let password = this.keyInputs.join('');
+
+        this.input.keyboard.on('keydown', (event) => {
+            if (event.key.length === 1){
+                this.keyInputs.push(event.key);
+                console.log(this.keyInputs)
+            }
+        });
+
+        this.input.keyboard.on('keydown-ENTER', () => {
+            let password = this.keyInputs.join('');
+            this.checkPasswordStrength(password);
+            this.keyInputs = [];
+        });
+
     }
+
 
 
 increaseStrength() {
@@ -89,6 +165,12 @@ increaseStrength() {
         duration: 300,
         ease: 'Power2'
     });
+
+    if(this.strength === 100) {
+        this.time.delayedCall(800, () => {
+            this.scene.restart();
+        });
+    }
 }
 
 animateToBar(img) {
