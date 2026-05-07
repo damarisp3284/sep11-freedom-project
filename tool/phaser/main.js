@@ -82,6 +82,22 @@ class MainScene extends Phaser.Scene {
 
         this.maxChars = 25;
 
+        this.keyInputs = [];
+
+    this.input.keyboard.on('keydown', (event) => {
+        if (event.key.length === 1) {
+        if (this.keyInputs.length < this.maxChars) {
+            this.keyInputs.push(event.key);
+            this.typedText.setText(this.keyInputs.join(""));
+        }
+    }
+
+    if (event.key === "Backspace") {
+        this.keyInputs.pop();
+        this.typedText.setText(this.keyInputs.join(""));
+    }
+});
+
     }
 
     checkPasswordStrength(password) {
