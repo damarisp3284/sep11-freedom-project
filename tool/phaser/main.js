@@ -19,6 +19,7 @@ class MainScene extends Phaser.Scene {
 
     create() {
 
+    this.maxChars = 25;
     this.keyInputs = []
 
         this.timeLeft = 30;
@@ -46,8 +47,6 @@ class MainScene extends Phaser.Scene {
             },
             loop: true
         });
-
-        this.keyInputs = []
 
          this.input.keyboard.on('keydown', (event) => {
             if (event.key.length === 1) {
@@ -79,7 +78,7 @@ class MainScene extends Phaser.Scene {
             color: '#5fc998'
         });
 
-        this.maxChars = 25;
+
 
 
 
