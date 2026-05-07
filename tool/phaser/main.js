@@ -18,69 +18,7 @@ class MainScene extends Phaser.Scene {
         }
 
     create() {
-        this.strength = 0;
-
-        this.barBg = this.add.rectangle(400,100,300,30,0x333333);
-        this.barFill = this.add.rectangle(250, 100,0,30,0x333333);
-
-        this.strengthText = this.add.text(100,80, 'Strength: 0',{
-            fontSize: '32px',
-            fill: '#ffffff'
-        });
-
-        let icons = [
-            { key: 'upper', x: 100, y:200 },
-            { key: 'number', x: 250, y: 200 },
-            { key: 'symbol', x: 400, y: 200 },
-            { key: 'length', x: 550, y: 200 }
-        ];
-
-        this.shuffle(icons);
-
-        icons.forEach(icon => {
-            const img = this.add.image(icon.x, icon.y, icon.key)
-            .setInteractive({ draggable: true });
-
-            img.on('pointerover', () => {
-                this.tweens.add ({
-                    targets: img,
-                    scale: 1.2,
-                    duration: 150
-                });
-            });
-
-            img.on('pointerout', () => {
-                this.tweens.add({
-                    targets: img,
-                    scale: 1,
-                    duration: 150
-                });
-            });
-
-            img.on('drag', (pointer, dragX, dragY) => {
-                img.x = dragX;
-                img.y = dragY;
-            });
-
-            img.on('dragend', () => {
-                const dist = Phaser.Math.Distance.Between(img.x, img.y, 400,100);
-
-                if (dist < 120) {
-                    this.increaseStrength();
-                    this.animateToBar(img);
-                } else {
-                    this.tweens.add({
-                        targets: img,
-                        x: icon.x,
-                        y: icon.y,
-                        duration: 300,
-                        ease: 'Back.easeOut'
-                    });
-                }
-            });
-        });
-
-
+        
         this.timeLeft = 30;
         this.points = 0;
 
