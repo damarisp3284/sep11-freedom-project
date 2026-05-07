@@ -75,15 +75,12 @@ class MainScene extends Phaser.Scene {
         });
     }
 
-     this.time.addEvent({
-        delay: 1000,
-        callback: () => {
-            this.timeLeft--;
-            this.timerText.setText('Time: ' + this.timeLeft);
-        },
-        callbackScope: this,
-        loop: false
-    });
+     this.timerEvent = this.time.addEvent({
+            delay: 1000,
+            callback: this.tickTimer,
+            callbackScope: this,
+            loop: true
+        });
 
 
     updateLiveStrength(password) {
