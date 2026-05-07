@@ -29,6 +29,33 @@ class MainScene extends Phaser.Scene {
     this.maxChars = 25;
     this.keyInputs = []
 
+    this.timeLeft = 30;
+    this.points = 0;
+
+    this.timerText = this.add.text(600,50, 'Time: 45',{
+            fontSize:'32px',
+            color: '#7632cf'
+        });
+
+        this.pointsText = this.add.text(600, 100, 'Points: 0',{
+            fontSize: '32px',
+            color: '#7632cf'
+        });
+
+        this.time.addEvent({
+            delay: 1000,
+            callback: () => {
+                this.timeLeft--;
+                this.timerText.setText('Time: ' + this.timeLeft);
+
+                if(this.timeLeft <= 0) {
+                    this.scene.restart();
+                }
+            },
+            loop: true
+        });
+
+
     this.input.keyboard.on('keydown', (event) => {
             if (event.key.length === 1) {
                 if (this.keyInputs.length < this.maxChars) {
@@ -52,31 +79,6 @@ class MainScene extends Phaser.Scene {
         });
 
 
-        this.timeLeft = 30;
-        this.points = 0;
-
-        this.timerText = this.add.text(600,50, 'Time: 45',{
-            fontSize:'32px',
-            color: '#7632cf'
-        });
-
-        this.pointsText = this.add.text(600, 100, 'Points: 0',{
-            fontSize: '32px',
-            color: '#7632cf'
-        });
-
-        this.time.addEvent({
-            delay: 1000,
-            callback: () => {
-                this.timeLeft--;
-                this.timerText.setText('Time: ' + this.timeLeft);
-
-                if(this.timeLeft <= 0) {
-                    this.scene.restart();
-                }
-            },
-            loop: true
-        });
 
     }
 
