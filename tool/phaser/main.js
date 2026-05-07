@@ -139,7 +139,7 @@ class MainScene extends Phaser.Scene {
         this.points += score;
         this.pointsText.setText('Points: ' + this.points);
     }
-
+}
 var config = {
     type: Phaser.AUTO,
     width: 800,
