@@ -103,25 +103,22 @@ class MainScene extends Phaser.Scene {
             score += 25;
         }
 
-        let hasUpper = [...password].some(c => c >= 'A' && c <= 'Z');
-        if (hasUpper) {
+        if ([...password].some(c => c >= 'A' && c <= 'Z')) {
             score += 25;
         }
 
-        let hasNumber = [...password].some(c => c >= '0' && c <= '9');
-        if (hasNumber) {
+        if ([...password].some(c => c >= '0' && c <= '9')) {
             score += 25;
         }
 
-        let hasSymbol = [...password].some(c =>
+        if ([...password].some(c =>
             !((c >= 'A' && c <= 'Z') ||
               (c >= 'a' && c <= 'z') ||
               (c >= '0' && c <= '9'))
-        );
-        if (hasSymbol) {
+        )) {
             score += 25;
         }
-
+        
         this.strengthText.setText('Strength: ' + score);
 
          if(score <= 25){
