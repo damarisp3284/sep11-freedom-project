@@ -153,7 +153,7 @@ class MainScene extends Phaser.Scene {
 
         this.strengthText.setText('Strength: ' + score);
 
-        this.addTime(score);
+        // this.addTime(score);
         this.addPoints(score);
     }
 
