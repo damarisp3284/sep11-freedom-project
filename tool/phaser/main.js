@@ -51,7 +51,7 @@ class MainScene extends Phaser.Scene {
                 if(this.timeLeft > 0) {
                     this.time.addEvent({
                         delay: 1000,
-                        callback:arguments.callee,
+                        callback: this.tickTimer,
                         callbackScope: this
                     });
                 } else {
