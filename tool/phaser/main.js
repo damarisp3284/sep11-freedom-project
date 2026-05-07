@@ -31,12 +31,12 @@ class MainScene extends Phaser.Scene {
             color: '#7632cf'
         });
 
-        this.pointsText = this.add.text(600, 100, 'Points: 0',{
+        this.pointsText = this.add.text(600, 90, 'Points: 0',{
             fontSize: '32px',
             color: '#7632cf'
         });
 
-        this.strengthText = this.add.text(600, 150, 'Strength: 0', {
+        this.strengthText = this.add.text(580, 130, 'Strength: 0', {
             fontSize: '32px',
             color: '#7632cf'
         });
