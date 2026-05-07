@@ -37,6 +37,11 @@ class MainScene extends Phaser.Scene {
             color: '#7632cf'
         });
 
+        this.strengthText = this.add.text(600, 150, 'Strength: 0', {
+            fontSize: '32px',
+            color: '#7632cf'
+        });
+        
         this.time.addEvent({
             delay: 1000,
             callback: this.tickTimer,
