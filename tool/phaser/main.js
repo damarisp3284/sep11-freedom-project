@@ -165,62 +165,35 @@ class MainScene extends Phaser.Scene {
             if(hasSymbol) {
                 score += 25
             };
+
+            this.strengthText.setText('Strength: ' + this.strength);
+
+            this.addTime(score);
+            this.addPoints(score);
+
     }
-        addTime(scrore) {
-            if(score === 100) {
-                this.timeLeft += 10;
-            } else if (score >= 75) {
-                this.timeLeft += 7;
-            } else if (score >= 50) {
-                this.timeLeft += 5;
-            } else if(score >= 25) {
-                this.timeLeft += 3;
-            } else {
-                this.timeLeft += 1;
-            }
-            this.timerText.setText('Time: ' + this.timeLeft);
+
+    addTime(score) {
+        if(score === 100) {
+            this.timeLeft += 10;
+        } else if(score >= 75) {
+            this.timeLeft += 7;
+        } else if (score >= 50) {
+            this.timeLeft += 5;
+        } else if (score >= 25) {
+            this.timeLeft += 3;
+        } else {
+            this.timeLeft += 1;
         }
 
-        addPoints(score) {
-            this.points += score;
-            this.pointsText.setText('Points: ' + this.points);
-        }
-
-
-increaseStrength() {
-    this.strength += 25;
-    if (this.strength > 100) {
-        this.strength = 100;
+        this.timeText.setText('Time: ' + this.timeLeft);
     }
 
-    this.strengthText.setText('Strength: ' + this.strength);
-
-    this.tweens.add({
-        targets: this.barFill,
-        width: 3 * this.strength,
-        duration: 300,
-        ease: 'Power2'
-    });
-
-    if(this.strength === 100) {
-        this.time.delayedCall(800, () => {
-            this.scene.restart();
-        });
+    addPoints(score) {
+        this.points += score;
+        this.pointsText.setText('Points: ' + this.points);
     }
-}
 
-animateToBar(img) {
-    this.tweens.add ({
-        targets: img,
-        x: 400,
-        y: 100,
-        scale: 0.5,
-        alpha: 0,
-        duration: 300,
-        onComplete: () => img.destroy()
-    });
-}
-}
 
 var config = {
     type: Phaser.AUTO,
