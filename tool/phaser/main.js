@@ -118,7 +118,7 @@ class MainScene extends Phaser.Scene {
         )) {
             score += 25;
         }
-        
+
         this.strengthText.setText('Strength: ' + score);
 
          if(score <= 25){
@@ -147,7 +147,9 @@ class MainScene extends Phaser.Scene {
             !((c >= 'A' && c <= 'Z') ||
               (c >= 'a' && c <= 'z') ||
               (c >= '0' && c <= '9'))
-        ))
+        )) {
+            score += 25;
+        }
 
         this.strengthText.setText('Strength: ' + score);
 
@@ -174,21 +176,21 @@ class MainScene extends Phaser.Scene {
         });
     }
 
-    addTime(score) {
-        if(score === 100) {
-            this.timeLeft += 10;
-        } else if(score >= 75) {
-            this.timeLeft += 7;
-        } else if (score >= 50) {
-            this.timeLeft += 5;
-        } else if (score >= 25) {
-            this.timeLeft += 3;
-        } else {
-            this.timeLeft += 1;
-        }
+    // addTime(score) {
+    //     if(score === 100) {
+    //         this.timeLeft += 10;
+    //     } else if(score >= 75) {
+    //         this.timeLeft += 7;
+    //     } else if (score >= 50) {
+    //         this.timeLeft += 5;
+    //     } else if (score >= 25) {
+    //         this.timeLeft += 3;
+    //     } else {
+    //         this.timeLeft += 1;
+    //     }
 
-        this.timerText.setText('Time: ' + this.timeLeft);
-    }
+    //     this.timerText.setText('Time: ' + this.timeLeft);
+    // }
 
     addPoints(score) {
         this.points += score;
