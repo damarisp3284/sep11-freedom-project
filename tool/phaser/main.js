@@ -83,6 +83,16 @@ class MainScene extends Phaser.Scene {
         });
 
 
+    tickTimer() {
+        this.timeLeft--;
+        this.timerText.setText('Time: ' + this.timeLeft);
+
+        if (this.timeLeft <= 0) {
+            this.timerEvent.remove();
+            this.scene.restart();
+        }
+    }
+    
     updateLiveStrength(password) {
         let score = 0;
 
