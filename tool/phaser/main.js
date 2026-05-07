@@ -67,7 +67,14 @@ class MainScene extends Phaser.Scene {
 
             this.keyInputs = []
             this.typedText.setText('');
-        })
+        });
+
+        this.inputbox = this.add.rectangle(300, 40, 500, 50, 0xffffff).setStrokeStyle(2, 0x000000);
+
+        this.typedText = this.add.text(60, 25, '', {
+            fontSize: '28px',
+            color: '#5fc998'
+        });
 
     }
 
