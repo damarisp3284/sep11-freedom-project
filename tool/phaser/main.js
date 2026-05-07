@@ -10,26 +10,6 @@ class MainScene extends Phaser.Scene {
         this.load.image("length", "https://dummyimage.com/80x80/ffaa00/ffffff&text=L");
     }
 
-     shuffle(array) {
-            for(let i = array.length -1; i > 0; i--) {
-                let j = Math.floor(Math.random() * (i + 1))
-                [array[i], array[j]] =[array[j], array[i]]
-            }
-
-            tickTimer() {
-            this.timeLeft--;
-            this.timerText.setText('Time: ' + this.timeLeft);
-
-            if (this.timeLeft > 0) {
-            this.time.addEvent({
-                delay: 1000,
-                callback: this.tickTimer,
-                callbackScope: this
-            });
-        } else {
-            this.scene.restart();
-        }
-    }
 }
 
     create() {
@@ -39,7 +19,7 @@ class MainScene extends Phaser.Scene {
     this.typedText = this.add.text(60 550, '', {
         fontSize: '28px',
         color: '#5fc998'
-    }).setOrigin(0.5);
+    });
 
     this.maxChars = 25;
     this.keyInputs = []
