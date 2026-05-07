@@ -18,6 +18,8 @@ class MainScene extends Phaser.Scene {
         }
 
     create() {
+
+    this.keyInputs = []
        this.typedText = this.add.text(50, 30, '', {
             fontSize:'28px',
             color:'#5fc998'
@@ -50,7 +52,7 @@ class MainScene extends Phaser.Scene {
         });
 
         this.keyInputs = []
-        
+
         this.input.keyboard.on('keydown', (event) => {
             if (event.key.length === 1){
                 this.keyInputs.push(event.key);
