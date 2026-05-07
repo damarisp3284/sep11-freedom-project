@@ -29,7 +29,7 @@ class MainScene extends Phaser.Scene {
     this.maxChars = 25;
     this.keyInputs = []
 
-    this.timeLeft = 30;
+    this.timeLeft = 45;
     this.points = 0;
 
     this.timerText = this.add.text(600,50, 'Time: 45',{
@@ -52,7 +52,7 @@ class MainScene extends Phaser.Scene {
                     this.scene.restart();
                 }
             },
-            loop: true
+            loop: false
         });
 
 
