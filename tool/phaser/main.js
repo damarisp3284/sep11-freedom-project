@@ -18,7 +18,7 @@ class MainScene extends Phaser.Scene {
         }
 
     create() {
-        
+       
         this.timeLeft = 30;
         this.points = 0;
 
