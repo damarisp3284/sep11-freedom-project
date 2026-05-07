@@ -128,6 +128,52 @@ class MainScene extends Phaser.Scene {
         }
     }
 
+
+    checkPasswordStrength(password) {
+        let score = 0;
+
+        if (password.length >= 8) score += 25;
+        if ([...password].some(c => c >= 'A' && c <= 'Z')) {
+            score += 25;
+        }
+
+        if ([...password].some(c => c >= '0' && c <= '9')) {
+            score += 25;
+        }
+
+        if ([...password].some(c =>
+            !((c >= 'A' && c <= 'Z') ||
+              (c >= 'a' && c <= 'z') ||
+              (c >= '0' && c <= '9'))
+        )) {
+            score += 25;
+        }
+
+        this.strengthText.setText('Strength: ' + score);
+
+        this.addTime(score);
+        this.addPoints(score);
+    }
+
+    shakeInputBox() {
+        this.tweens.add({
+            targets: this.inputbox,
+            x: {from: 400 - 10, to: 400 + 10},
+            duration: 50,
+            yoyo: true,
+            repeat: 4
+        });
+    }
+
+     flashGreen() {
+        this.tweens.add({
+            targets: this.inputbox,
+            fillColor: 0x00ff00,
+            duration: 150,
+            yoyo: true
+        });
+    }
+
     addTime(score) {
         if(score === 100) {
             this.timeLeft += 10;
@@ -149,25 +195,8 @@ class MainScene extends Phaser.Scene {
         this.pointsText.setText('Points: ' + this.points);
     }
 
-    shakeInputBox() {
-        this.tweens.add({
-            targets: this.inputbox,
-            x: {from: 400 - 10, to: 400 + 10},
-            duration: 50,
-            yoyo, true,
-            repeat: 4
-        });
-    }
-
-    flashGreen() {
-        this.tweens.add({
-            targets: this.inputbox,
-            fillColor: 0x00ff00,
-            duration: 150,
-            yoyo: true
-        });
-    }
 }
+
 var config = {
     type: Phaser.AUTO,
     width: 800,
