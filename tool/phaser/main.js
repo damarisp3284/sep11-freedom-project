@@ -49,6 +49,8 @@ class MainScene extends Phaser.Scene {
             loop: true
         });
 
+        this.keyInputs = []
+        
         this.input.keyboard.on('keydown', (event) => {
             if (event.key.length === 1){
                 this.keyInputs.push(event.key);
