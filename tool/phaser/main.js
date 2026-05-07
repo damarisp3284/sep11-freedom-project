@@ -98,7 +98,7 @@ class MainScene extends Phaser.Scene {
             delay: 1000,
             callback: () => {
                 this.timeLeft--;
-                this.timeText.setText('Time: ' + this.timeLeft);
+                this.timerText.setText('Time: ' + this.timeLeft);
 
                 if(this.timeLeft <= 0) {
                     this.scene.restart();
@@ -166,7 +166,7 @@ class MainScene extends Phaser.Scene {
                 score += 25
             };
 
-            this.strengthText.setText('Strength: ' + this.strength);
+            this.strengthText.setText('Strength: ' + score);
 
             this.addTime(score);
             this.addPoints(score);
@@ -186,14 +186,14 @@ class MainScene extends Phaser.Scene {
             this.timeLeft += 1;
         }
 
-        this.timeText.setText('Time: ' + this.timeLeft);
+        this.timerText.setText('Time: ' + this.timeLeft);
     }
 
     addPoints(score) {
         this.points += score;
         this.pointsText.setText('Points: ' + this.points);
     }
-
+}
 
 var config = {
     type: Phaser.AUTO,
