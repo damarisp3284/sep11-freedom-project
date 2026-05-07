@@ -73,7 +73,7 @@ class MainScene extends Phaser.Scene {
             this.keyInputs = []
             this.typedText.setText('');
         });
-    }
+
 
      this.timerEvent = this.time.addEvent({
             delay: 1000,
@@ -81,7 +81,7 @@ class MainScene extends Phaser.Scene {
             callbackScope: this,
             loop: true
         });
-
+    }
 
     tickTimer() {
         this.timeLeft--;
@@ -92,7 +92,7 @@ class MainScene extends Phaser.Scene {
             this.scene.restart();
         }
     }
-    
+
     updateLiveStrength(password) {
         let score = 0;
 
