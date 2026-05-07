@@ -19,8 +19,38 @@ class MainScene extends Phaser.Scene {
 
     create() {
 
+     this.inputbox = this.add.rectangle(300, 40, 500, 50, 0xffffff).setStrokeStyle(2, 0x000000);
+
+    this.typedText = this.add.text(60, 25, '', {
+        fontSize: '28px',
+        color: '#5fc998'
+    });
+
     this.maxChars = 25;
     this.keyInputs = []
+
+    this.input.keyboard.on('keydown', (event) => {
+            if (event.key.length === 1) {
+                if (this.keyInputs.length < this.maxChars) {
+                this.keyInputs.push(event.key);
+                this.typedText.setText(this.keyInputs.join(''));
+            }
+        }
+
+        if (event.key === "Backspace") {
+            this.keyInputs.pop();
+            this.typedText.setText(this.keyInputs.join(''));
+        }
+    });
+
+    this.input.keyboard.on('keydown-ENTER', () => {
+            let password = this.keyInputs.join('');
+            this.checkPasswordStrength(password);
+
+            this.keyInputs = []
+            this.typedText.setText('');
+        });
+
 
         this.timeLeft = 30;
         this.points = 0;
@@ -47,40 +77,6 @@ class MainScene extends Phaser.Scene {
             },
             loop: true
         });
-
-         this.input.keyboard.on('keydown', (event) => {
-            if (event.key.length === 1) {
-                if (this.keyInputs.length < this.maxChars) {
-                this.keyInputs.push(event.key);
-                this.typedText.setText(this.keyInputs.join(''));
-            }
-        }
-
-        if (event.key === "Backspace") {
-            this.keyInputs.pop();
-            this.typedText.setText(this.keyInputs.join(''));
-        }
-    });
-
-
-        this.input.keyboard.on('keydown-ENTER', () => {
-            let password = this.keyInputs.join('');
-            this.checkPasswordStrength(password);
-
-            this.keyInputs = []
-            this.typedText.setText('');
-        });
-
-        this.inputbox = this.add.rectangle(300, 40, 500, 50, 0xffffff).setStrokeStyle(2, 0x000000);
-
-        this.typedText = this.add.text(60, 25, '', {
-            fontSize: '28px',
-            color: '#5fc998'
-        });
-
-
-
-
 
     }
 
