@@ -2,7 +2,37 @@ class MainScene extends Phaser.Scene {
     constructor() {
         super('MainScene')
     };
+class GameOverScene extends Phaser.Scene{
+    constructor() {
+        super('GameOverScene');
+    }
 
+    init(data) {
+        this.finalScore = data.score;
+    }
+
+    create() {
+        this.add.text(400,200, 'GAME OVER', {
+            fontSize: '64px',
+            color: '#db1d39'
+        }).setOrigin(0.5);
+
+        this.add.text(400,300, 'Your Score: ' + this.finalScore, {
+            fontSize: '40px',
+            color: '#4fd687'
+        }).setOrigin(0.5);
+
+        this.add.text(400,450, 'Press ENTER to Restart', {
+            fontSize: '28px',
+            color: '#2ed149'
+        }).setOrigin(0.5)
+
+        this.input.keyboard.on('keydown-ENTER', () => {
+            this.scene.start('MainScene')
+        });
+
+    }
+}
     preload() {
         this.load.image("upper", "https://dummyimage.com/80x80/ff4444/ffffff&text=A");
         this.load.image("number", "https://dummyimage.com/80x80/44ff44/ffffff&text=1");
@@ -89,7 +119,10 @@ class MainScene extends Phaser.Scene {
 
         if (this.timeLeft <= 0) {
             this.timerEvent.remove();
-            this.scene.restart();
+
+            this.scene.start('GameOverScene', {
+                score: this.points
+            });
         }
     }
 
@@ -147,7 +180,7 @@ class MainScene extends Phaser.Scene {
             !((c >= 'A' && c <= 'Z') ||
               (c >= 'a' && c <= 'z') ||
               (c >= '0' && c <= '9'))
-        )) 
+        ))
 
         this.strengthText.setText('Strength: ' + score);
 
@@ -202,7 +235,7 @@ var config = {
     width: 800,
     height: 600,
     backgroundColor: '#1d92db',
-    scene: [MainScene]
+    scene: [MainScene, GameOverScene]
 };
 
 var game = new Phaser.Game(config);
