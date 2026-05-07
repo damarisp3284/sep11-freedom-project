@@ -24,7 +24,7 @@ class MainScene extends Phaser.Scene {
     this.typedText = this.add.text(60, 25, '', {
         fontSize: '28px',
         color: '#5fc998'
-    });
+    }).setOrigin(0.5);
 
     this.maxChars = 25;
     this.keyInputs = []
