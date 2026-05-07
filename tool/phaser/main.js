@@ -114,7 +114,7 @@ class MainScene extends Phaser.Scene {
         }
 
         this.keyInputs.push(event.key);
-        this.typedText.setText(this.keyInputs).join('')
+        let password = this.(keyInputs).join('')
 
         this.strengthText.setText('Strength: ' + score);
 
