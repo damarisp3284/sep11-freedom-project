@@ -10,7 +10,6 @@ class MainScene extends Phaser.Scene {
         this.load.image("length", "https://dummyimage.com/80x80/ffaa00/ffffff&text=L");
     }
 
-}
 
     create() {
 
