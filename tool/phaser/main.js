@@ -62,6 +62,8 @@ class MainScene extends Phaser.Scene {
         }
     });
 
+    this.keyInputs
+
     this.input.keyboard.on('keydown-ENTER', () => {
             let password = this.keyInputs.join('');
             this.checkPasswordStrength(password);
@@ -114,7 +116,9 @@ class MainScene extends Phaser.Scene {
         }
 
         this.keyInputs.push(event.key);
-        let password = this.(keyInputs).join('')
+        let password = this.keyInputs.join('');
+        this.typedText.setText(password);
+        this.updateLiveStrength(password);
 
         this.strengthText.setText('Strength: ' + score);
 
