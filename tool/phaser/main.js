@@ -15,6 +15,21 @@ class MainScene extends Phaser.Scene {
                 let j = Math.floor(Math.random() * (i + 1))
                 [array[i], array[j]] =[array[j], array[i]]
             }
+
+     tickTimer() {
+            this.timeLeft--;
+            this.timerText.setText('Time: ' + this.timeLeft);
+
+            if (this.timeLeft > 0) {
+            this.time.addEvent({
+                delay: 1000,
+                callback: this.tickTimer,
+                callbackScope: this
+            });
+        } else {
+            this.scene.restart();
+        }
+    }
         }
 
     create() {
@@ -44,20 +59,7 @@ class MainScene extends Phaser.Scene {
 
         this.time.addEvent({
             delay: 1000,
-            callback: () => {
-                this.timeLeft--;
-                this.timerText.setText('Time: ' + this.timeLeft);
-
-                if(this.timeLeft > 0) {
-                    this.time.addEvent({
-                        delay: 1000,
-                        callback: this.tickTimer,
-                        callbackScope: this
-                    });
-                } else {
-                    this.scene.restart();
-                }
-            },
+            callback: this.tickTimer,
             callbackScope: this
         });
 
@@ -83,7 +85,6 @@ class MainScene extends Phaser.Scene {
             this.keyInputs = []
             this.typedText.setText('');
         });
-
 
 
     }
@@ -130,8 +131,6 @@ class MainScene extends Phaser.Scene {
             if(hasSymbol) {
                 score += 25
             };
-
-            this.strengthText.setText('Strength: ' + score);
 
             this.addTime(score);
             this.addPoints(score);
