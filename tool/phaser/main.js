@@ -23,7 +23,7 @@ class StartScene extends Phaser.Scene {
 
             const startButton = this.add.text(400, 450, 'START GAME', {
                 fontSize: '32px',
-                color: '#1bb563',
+                color: '#2ed149',
                 fontStyle: 'bold'
             }).setOrigin(0.5).setInteractive({ useHandCursor: true })
 
