@@ -16,7 +16,7 @@ class MainScene extends Phaser.Scene {
                 [array[i], array[j]] =[array[j], array[i]]
             }
 
-     tickTimer() {
+            tickTimer() {
             this.timeLeft--;
             this.timerText.setText('Time: ' + this.timeLeft);
 
@@ -30,7 +30,7 @@ class MainScene extends Phaser.Scene {
             this.scene.restart();
         }
     }
-        }
+}
 
     create() {
 
