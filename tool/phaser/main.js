@@ -41,7 +41,7 @@ class MainScene extends Phaser.Scene {
             fontSize: '32px',
             color: '#7632cf'
         });
-        
+
         this.time.addEvent({
             delay: 1000,
             callback: this.tickTimer,
@@ -71,8 +71,22 @@ class MainScene extends Phaser.Scene {
             this.typedText.setText('');
         });
 
+        tickTimer() {
+        this.timeLeft--;
+        this.timerText.setText('Time: ' + this.timeLeft);
 
+        if (this.timeLeft > 0) {
+            this.time.addEvent({
+                delay: 1000,
+                callback: this.tickTimer,
+                callbackScope: this
+            });
+        } else {
+            this.scene.restart();
+        }
     }
+
+}
 
     checkPasswordStrength(password) {
         let score = 0;
