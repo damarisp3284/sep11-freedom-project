@@ -86,7 +86,6 @@ class MainScene extends Phaser.Scene {
         }
     }
 
-}
 
     checkPasswordStrength(password) {
         let score = 0;
