@@ -147,6 +147,32 @@ class MainScene extends Phaser.Scene {
             this.keyInputs = [];
         });
 
+        let hasUpper = false;
+        for(let i = 0; i < password.length; i++) {
+            if(password[i] >= 'A' && password[i] <= 'Z') {
+                hasUpper = true;
+                break;
+            }
+        }
+
+        let hasNumber = false;
+        for(let i = 0; i < password.length; i++) {
+            if(password[i] >= '0' && password[i] <= '9') {
+                hasNumber = true;
+                break;
+            }
+        }
+
+        let hasSymbol = false;
+        for(let i = 0; i < password.length; i++) {
+            let c = password[i];
+            if(!((c >= 'A' && c <= 'Z') ||
+                (c >= 'a' && c <= 'z') ||
+                (c >= '0' && c <= '9'))) {
+                    hasSymbol = true;
+                    break;
+                }
+            }
     }
 
 
