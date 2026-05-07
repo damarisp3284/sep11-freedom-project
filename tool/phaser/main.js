@@ -1,3 +1,45 @@
+class StartScene extends Phaser.Scene {
+    constructor() {
+        super('StartScene');
+    }
+
+    create() {
+        this.add.text(400,120, 'HOW TO PLAY', {
+            fontSize: '48px',
+            color: '#312ed1'
+        }).setOrigin(0.5)
+
+        this.add.text(400, 259,
+            `* Create a password
+            * Press ENTER to submit it
+            * If password isnt good enough it cant be entered
+            * Stronger the password the more points!
+            * When time reaches 0, game ends`,
+            {
+                fontSize: '26px',
+                color: '#312ed1'
+                align: 'center'
+            }).setOrigin(0.5);
+
+            const startButton = this.add.text(400, 450, 'START GAME', {
+                fontSize: '32px',
+                color: '#1bb563',
+                fontStyle: 'bold'
+            }).setOrigin(0.5).setInteractive({ useHandCursor: true })
+
+            startButton.on('pointover', () => {
+                startButton.setColor('#ffff00');
+            });
+            startButton.on('pointout', () => {
+                startButton.setColor('#00ff00');
+            });
+
+            startButton.on('pointerdown', () => {
+                this.scene.start('MainScene')
+            });
+    }
+}
+
 class MainScene extends Phaser.Scene {
     constructor() {
         super('MainScene')
@@ -227,7 +269,7 @@ var config = {
     width: 800,
     height: 600,
     backgroundColor: '#1d92db',
-    scene: [MainScene, GameOverScene]
+    scene: [StartScene, MainScene, GameOverScene]
 };
 
 var game = new Phaser.Game(config);
