@@ -80,6 +80,8 @@ class MainScene extends Phaser.Scene {
             color: '#5fc998'
         });
 
+        this.maxChars = 25;
+
     }
 
     checkPasswordStrength(password) {
