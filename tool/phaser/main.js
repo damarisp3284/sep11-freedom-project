@@ -3,46 +3,6 @@ class MainScene extends Phaser.Scene {
         super('MainScene')
     };
 
-    class GameOverScene extends Phaser.Scene{
-        constructor() {
-            super('GameOverScene');
-        }
-
-        init(data) {
-            this.finalScore = data.score;
-        }
-
-        create() {
-            this.add.text(400,200, 'GAME OVER', {
-                fontSize: '64px',
-                color: '#db1d39'
-            }).setOrigin(0.5);
-
-            this.add.text(400,300, 'Your Score: ' + this.finalScore, {
-                fontSize: '40px',
-                color: '#4fd687'
-            }).setOrigin(0.5);
-
-            const playAgain = this.add.text(400,450, 'PLAY AGAIN', {
-                fontSize: '28px',
-                color: '#2ed149',
-                fontStyle: 'bold'
-            }).setOrigin(0.5).setInteractive({ useHandCursor: true });
-
-            playAgain.on('pointerover', () => {
-                playAgain.setColor('#2ed149');
-            });
-
-            playAgain.on('pointerout', () => {
-                playAgain.setColor('#2ed149')
-            });
-
-            playAgain.on('pointerdown', () => {
-                this.scene.start('MainScene')
-            });
-        }
-    }
-
     preload() {
         this.load.image("upper", "https://dummyimage.com/80x80/ff4444/ffffff&text=A");
         this.load.image("number", "https://dummyimage.com/80x80/44ff44/ffffff&text=1");
@@ -239,6 +199,46 @@ class MainScene extends Phaser.Scene {
     }
 
 }
+
+class GameOverScene extends Phaser.Scene{
+        constructor() {
+            super('GameOverScene');
+        }
+
+        init(data) {
+            this.finalScore = data.score;
+        }
+
+        create() {
+            this.add.text(400,200, 'GAME OVER', {
+                fontSize: '64px',
+                color: '#db1d39'
+            }).setOrigin(0.5);
+
+            this.add.text(400,300, 'Your Score: ' + this.finalScore, {
+                fontSize: '40px',
+                color: '#4fd687'
+            }).setOrigin(0.5);
+
+            const playAgain = this.add.text(400,450, 'PLAY AGAIN', {
+                fontSize: '28px',
+                color: '#2ed149',
+                fontStyle: 'bold'
+            }).setOrigin(0.5).setInteractive({ useHandCursor: true });
+
+            playAgain.on('pointerover', () => {
+                playAgain.setColor('#2ed149');
+            });
+
+            playAgain.on('pointerout', () => {
+                playAgain.setColor('#2ed149')
+            });
+
+            playAgain.on('pointerdown', () => {
+                this.scene.start('MainScene')
+            });
+        }
+    }
 
 var config = {
     type: Phaser.AUTO,
