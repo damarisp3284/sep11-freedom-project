@@ -4,9 +4,20 @@
 ### Context
 Text
 
+---
+
 ### Tool
 
+---
+
 ### EDP
+
+---
+
+
+### Skills
+
+Using **Time management** and **Organization** 
 
 
 [Previous](entry05.md) | [Next](entry07.md)
