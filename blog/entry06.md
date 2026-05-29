@@ -15,6 +15,8 @@ At first I wanted to do something different than what I previously had so during
 
 ### EDP
 
+I was in my final stages as I already had in mind what I wanted to build which allows user's to type, using special characters in their passwords it can help improve their score an before they even sumbit it they have a strength bar to where they can see how strong it is 
+
 ---
 
 
