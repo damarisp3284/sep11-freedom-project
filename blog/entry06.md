@@ -22,7 +22,6 @@ I was in my final stages as I already had in mind what I wanted to build which a
 
 ### Skills
 
-Using **Time management** and **Organization** 
 
 
 [Previous](entry05.md) | [Next](entry07.md)
