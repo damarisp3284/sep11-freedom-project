@@ -11,7 +11,7 @@ I decided to create something simple so it can match my hook that we have brains
 
 ### Tool
 
-At first I wanted to do something different than what I previously had so during the days we had off as well as the weekends I started to work on something else for my project, looking back at the **documentation** I manage to add in what I wanted but also what I would want to improve my project, after tinkering for most of the school year I looked back at the [https://docs.phaser.io/phaser/concepts/physics/arcade]
+At first I wanted to do something different than what I previously had so during the days we had off as well as the weekends I started to work on something else for my project, looking back at the **documentation** I manage to add in what I wanted but also what I would want to improve my project, after tinkering for most of the school year I looked back at the <a href = "https://docs.phaser.io/phaser/concepts/physics/arcade"> Arcade Physics section </a> I gathered what features I liked and combined it with the simple features such as a timer and score bar. I also took some reference from a typing website called **Typing Club** which i decided to add a bar where users can type in and see their input
 
 ---
 
